@@ -766,6 +766,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Premium"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="PremiumButtonMouseClicked"/>
+          </Events>
         </Component>
         <Container class="javax.swing.JTabbedPane" name="UserTabbedPane">
 
@@ -1235,12 +1238,12 @@
         </Container>
         <Component class="javax.swing.JLabel" name="Username">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jLabel1"/>
+            <Property name="text" type="java.lang.String" value="Pinguino Usuario"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="Userdinero">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jLabel2"/>
+            <Property name="text" type="java.lang.String" value="Dinero"/>
           </Properties>
         </Component>
       </SubComponents>

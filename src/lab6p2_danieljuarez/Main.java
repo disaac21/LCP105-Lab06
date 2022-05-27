@@ -595,6 +595,11 @@ public class Main extends javax.swing.JFrame {
         );
 
         PremiumButton.setText("Premium");
+        PremiumButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                PremiumButtonMouseClicked(evt);
+            }
+        });
 
         ComprarItemButton.setText("Comprar");
         ComprarItemButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -907,9 +912,9 @@ public class Main extends javax.swing.JFrame {
 
         UserTabbedPane.addTab("Juegos", JuegosTab1);
 
-        Username.setText("jLabel1");
+        Username.setText("Pinguino Usuario");
 
-        Userdinero.setText("jLabel2");
+        Userdinero.setText("Dinero");
 
         javax.swing.GroupLayout PinguinPaneLayout = new javax.swing.GroupLayout(PinguinPane.getContentPane());
         PinguinPane.getContentPane().setLayout(PinguinPaneLayout);
@@ -1180,6 +1185,17 @@ public class Main extends javax.swing.JFrame {
     private void GuardarCasaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarCasaButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_GuardarCasaButtonActionPerformed
+
+    private void PremiumButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PremiumButtonMouseClicked
+        int CompraPremium = Using.getDineroPinguino();
+        if (CompraPremium < 2000) {
+            JOptionPane.showMessageDialog(rootPane, "No Cuenta Con El Dinero Suficiente");
+        } else {
+            Using.setSocioPinguino(true);
+            JOptionPane.showMessageDialog(rootPane, "Felicidades! Ahora Es Premium");
+        }
+        
+    }//GEN-LAST:event_PremiumButtonMouseClicked
 
     /**
      * @param args the command line arguments
