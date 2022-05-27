@@ -948,8 +948,6 @@ public class Main extends javax.swing.JFrame {
                     .addContainerGap(33, Short.MAX_VALUE)))
         );
 
-        Username.setText("Pinguino " + tf_Nombre);
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         ClubPenguin.setText("Club Penguin");
@@ -1023,6 +1021,8 @@ public class Main extends javax.swing.JFrame {
                         Using = Users.get(i);
                     }
                 }
+                Username.setText("Pinguino " + Using.NombrePinguino);
+                Userdinero.setText("Dinero: " + Using.DineroPinguino);
                 JOptionPane.showMessageDialog(this, "LogIn", "Bienvenido " + Using.getNombrePinguino(), JOptionPane.PLAIN_MESSAGE);
                 tf_Nombre.setText("");
                 tf_Contraseña.setText("");
@@ -1035,6 +1035,8 @@ public class Main extends javax.swing.JFrame {
                 Pinguino np = new Pinguino(tf_Nombre.getText(), tf_Contraseña.getText(), false, 1000, null);
                 Users.add(np);
                 Using = np;
+                Username.setText("Pinguino " + Using.NombrePinguino);
+                Userdinero.setText("Dinero: " + Using.DineroPinguino);
                 JOptionPane.showMessageDialog(this, "LogIn", "Bienvenido " + Using.getNombrePinguino(), JOptionPane.PLAIN_MESSAGE);
                 tf_Nombre.setText("");
                 tf_Contraseña.setText("");
