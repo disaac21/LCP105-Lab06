@@ -8,18 +8,17 @@ public class Pinguino {
     public String ContraseñaPinguino;
     public boolean SocioPinguino;
     public int DineroPinguino;
-    public ArrayList <Item> ItemsPinguino;
+    public ArrayList <Item> ItemsPinguino = new ArrayList();
     public Casa CasaPinguino;
 
     public Pinguino() {
     }
     
-    public Pinguino(String NombrePinguino, String ContraseñaPinguino, boolean SocioPinguino, int DineroPinguino, ArrayList<Item> ItemsPinguino, Casa CasaPinguino) {
+    public Pinguino(String NombrePinguino, String ContraseñaPinguino, boolean SocioPinguino, int DineroPinguino, Casa CasaPinguino) {
         this.NombrePinguino = NombrePinguino;
         this.ContraseñaPinguino = ContraseñaPinguino;
         this.SocioPinguino = SocioPinguino;
         this.DineroPinguino = DineroPinguino;
-        this.ItemsPinguino = ItemsPinguino;
         this.CasaPinguino = CasaPinguino;
     }
 

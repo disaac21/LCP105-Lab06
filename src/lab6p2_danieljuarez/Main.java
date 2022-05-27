@@ -1011,15 +1011,38 @@ public class Main extends javax.swing.JFrame {
             AdminPane.setLocationRelativeTo(this);
             AdminPane.setVisible(true);
         } else {
-            Pinguino np = new Pinguino(tf_Nombre.getText(), tf_Contraseña.getText(), false, 1000, null, null);
-//            Users.add(newpinguino);
-            JOptionPane.showMessageDialog(this, "LogIn", "Bienvenido " + tf_Nombre.getText(), JOptionPane.PLAIN_MESSAGE);
-            tf_Nombre.setText("");
-            tf_Contraseña.setText("");
-            PinguinPane.setModal(true);
-            PinguinPane.pack();
-            PinguinPane.setLocationRelativeTo(this);
-            PinguinPane.setVisible(true);
+            boolean existe = false;
+            for (int i = 0; i < Users.size(); i++) {
+                if (tf_Nombre.getText().equals(Users.get(i).getNombrePinguino())) {
+                    existe = true;
+                }
+            }
+            if (existe) {
+                for (int i = 0; i < Users.size(); i++) {
+                    if (tf_Nombre.getText().equals(Users.get(i).getNombrePinguino()) && tf_Contraseña.getText().equals(Users.get(i).getContraseñaPinguino())){
+                        Using = Users.get(i);
+                    }
+                }
+                JOptionPane.showMessageDialog(this, "LogIn", "Bienvenido " + Using.getNombrePinguino(), JOptionPane.PLAIN_MESSAGE);
+                tf_Nombre.setText("");
+                tf_Contraseña.setText("");
+                PinguinPane.setModal(true);
+                PinguinPane.pack();
+                PinguinPane.setLocationRelativeTo(this);
+                PinguinPane.setVisible(true);
+                return;
+            } else {
+                Pinguino np = new Pinguino(tf_Nombre.getText(), tf_Contraseña.getText(), false, 1000, null);
+                Users.add(np);
+                Using = np;
+                JOptionPane.showMessageDialog(this, "LogIn", "Bienvenido " + Using.getNombrePinguino(), JOptionPane.PLAIN_MESSAGE);
+                tf_Nombre.setText("");
+                tf_Contraseña.setText("");
+                PinguinPane.setModal(true);
+                PinguinPane.pack();
+                PinguinPane.setLocationRelativeTo(this);
+                PinguinPane.setVisible(true);
+            }
         }
     }//GEN-LAST:event_EntrarButtonMouseClicked
 
@@ -1093,7 +1116,7 @@ public class Main extends javax.swing.JFrame {
         String PuffleNombre = tf_NombrePuffle.getText();
         Color ColorPuffle = CCPuffleButton.getBackground();
         int PrecioPuffle = Integer.parseInt(tf_PrecioPuffle.getText());
-        
+
         Puffle p = new Puffle(PuffleNombre, PrecioPuffle, ColorPuffle);
         Puffles.add(p);
         Object[] newrow = {
@@ -1109,7 +1132,7 @@ public class Main extends javax.swing.JFrame {
         tf_NombrePuffle.setText("");
         CCPuffleButton.setBackground(null);
         tf_PrecioPuffle.setText("");
-        
+
     }//GEN-LAST:event_GuardarPuffleButtonMouseClicked
 
     private void CCPuffleButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CCPuffleButtonMouseClicked
@@ -1117,7 +1140,7 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_CCPuffleButtonMouseClicked
 
     private void GuardarJuegoButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GuardarJuegoButtonMouseClicked
-        
+
         String JuegoNombre = tf_NombreJuego.getText();
         int JuegoCosto = Integer.parseInt(tf_CostoJuego.getText());
         int JuegoRecompensa = Integer.parseInt(tf_RecompensaJuego.getText());
@@ -1137,7 +1160,7 @@ public class Main extends javax.swing.JFrame {
         tf_CostoJuego.setText("");
         tf_RecompensaJuego.setText("");
         tf_ExitoJuego.setText("");
-        
+
     }//GEN-LAST:event_GuardarJuegoButtonMouseClicked
 
     private void tf_NombreItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_NombreItemActionPerformed
@@ -1279,5 +1302,6 @@ public class Main extends javax.swing.JFrame {
     ArrayList<Casa> Casas = new ArrayList();
     ArrayList<Puffle> Puffles = new ArrayList();
     String useradmin = "p", passwordadmin = "p";
+    Pinguino Using;
 
 }
