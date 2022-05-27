@@ -10,19 +10,17 @@ public class Pinguino {
     public int DineroPinguino;
     public ArrayList <Item> ItemsPinguino;
     public Casa CasaPinguino;
-    public boolean Premium;
 
     public Pinguino() {
     }
     
-    public Pinguino(String NombrePinguino, String ContraseñaPinguino, boolean SocioPinguino, int DineroPinguino, ArrayList<Item> ItemsPinguino, Casa CasaPinguino, boolean Premium) {
+    public Pinguino(String NombrePinguino, String ContraseñaPinguino, boolean SocioPinguino, int DineroPinguino, ArrayList<Item> ItemsPinguino, Casa CasaPinguino) {
         this.NombrePinguino = NombrePinguino;
         this.ContraseñaPinguino = ContraseñaPinguino;
         this.SocioPinguino = SocioPinguino;
         this.DineroPinguino = DineroPinguino;
         this.ItemsPinguino = ItemsPinguino;
         this.CasaPinguino = CasaPinguino;
-        this.Premium = Premium;
     }
 
     public String getNombrePinguino() {
@@ -71,14 +69,6 @@ public class Pinguino {
 
     public void setCasaPinguino(Casa CasaPinguino) {
         this.CasaPinguino = CasaPinguino;
-    }
-
-    public boolean isPremium() {
-        return Premium;
-    }
-
-    public void setPremium(boolean Premium) {
-        this.Premium = Premium;
     }
 
     @Override
