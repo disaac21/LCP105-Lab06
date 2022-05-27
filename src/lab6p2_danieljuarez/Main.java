@@ -42,7 +42,8 @@ public class Main extends javax.swing.JFrame {
         PrecioItem = new javax.swing.JLabel();
         tf_PrecioItem = new javax.swing.JTextField();
         TipoItem = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        cb_TipoItem = new javax.swing.JComboBox<>();
+        GuardarItemButton = new javax.swing.JButton();
         CasaTab = new javax.swing.JPanel();
         PufflesTab = new javax.swing.JPanel();
         JuegosTab = new javax.swing.JPanel();
@@ -96,8 +97,15 @@ public class Main extends javax.swing.JFrame {
 
         TipoItem.setText("Tipo");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sombreros", "Gafas", "Bufanda", "Chaqueta", "Pantalon", "Zapatos" }));
-        jComboBox1.setSelectedIndex(-1);
+        cb_TipoItem.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sombreros", "Gafas", "Bufanda", "Chaqueta", "Pantalon", "Zapatos" }));
+        cb_TipoItem.setSelectedIndex(-1);
+
+        GuardarItemButton.setText("Guardar");
+        GuardarItemButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                GuardarItemButtonMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout ItemsTabLayout = new javax.swing.GroupLayout(ItemsTab);
         ItemsTab.setLayout(ItemsTabLayout);
@@ -111,7 +119,8 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(tf_PrecioItem, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
                     .addComponent(NombreItem)
                     .addComponent(tf_NombreItem)
-                    .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(cb_TipoItem, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(GuardarItemButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(117, 117, 117))
             .addGroup(ItemsTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ItemsTabLayout.createSequentialGroup()
@@ -133,8 +142,10 @@ public class Main extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(TipoItem)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(cb_TipoItem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addComponent(GuardarItemButton)
+                .addContainerGap())
             .addGroup(ItemsTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ItemsTabLayout.createSequentialGroup()
                     .addGap(19, 19, 19)
@@ -272,13 +283,19 @@ public class Main extends javax.swing.JFrame {
             AdminPane.pack();
             AdminPane.setLocationRelativeTo(this);
             AdminPane.setVisible(true);
-
         }
     }//GEN-LAST:event_EntrarButtonMouseClicked
 
     private void tf_NombreItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_NombreItemActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tf_NombreItemActionPerformed
+
+    private void GuardarItemButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GuardarItemButtonMouseClicked
+        String NombreItem = tf_NombreItem.getText();
+        String PrecioItem = tf_PrecioItem.getText();
+        String TipoItem = cb_TipoItem.getSelectedItem().toString();
+        Item i = new Item();
+    }//GEN-LAST:event_GuardarItemButtonMouseClicked
 
     /**
      * @param args the command line arguments
@@ -322,6 +339,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel ClubPenguin;
     private javax.swing.JLabel Contraseña;
     private javax.swing.JButton EntrarButton;
+    private javax.swing.JButton GuardarItemButton;
     private javax.swing.JScrollPane ItemsScrollPane;
     private javax.swing.JPanel ItemsTab;
     private javax.swing.JPanel JuegosTab;
@@ -332,7 +350,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel PufflesTab;
     private javax.swing.JTable TableItems;
     private javax.swing.JLabel TipoItem;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> cb_TipoItem;
     private javax.swing.JTextField tf_Contraseña;
     private javax.swing.JTextField tf_Nombre;
     private javax.swing.JTextField tf_NombreItem;
