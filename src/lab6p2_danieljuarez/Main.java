@@ -5,9 +5,12 @@
  */
 package lab6p2_danieljuarez;
 
+import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.JColorChooser;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -45,7 +48,29 @@ public class Main extends javax.swing.JFrame {
         cb_TipoItem = new javax.swing.JComboBox<>();
         GuardarItemButton = new javax.swing.JButton();
         CasaTab = new javax.swing.JPanel();
+        CasaScrollPane = new javax.swing.JScrollPane();
+        TableCasa = new javax.swing.JTable();
+        NombreCasa = new javax.swing.JLabel();
+        tf_NombreCasa = new javax.swing.JTextField();
+        TamañoCasa = new javax.swing.JLabel();
+        tf_TamañoCasa = new javax.swing.JTextField();
+        CostoCasa = new javax.swing.JLabel();
+        tf_CostoCasa = new javax.swing.JTextField();
+        XCasa = new javax.swing.JLabel();
+        tf_XCasa = new javax.swing.JTextField();
+        YCasa = new javax.swing.JLabel();
+        tf_YCasa = new javax.swing.JTextField();
+        GuardarCasaButton = new javax.swing.JButton();
         PufflesTab = new javax.swing.JPanel();
+        PufflesScrollPane = new javax.swing.JScrollPane();
+        TablePuffles = new javax.swing.JTable();
+        NombrePuffle = new javax.swing.JLabel();
+        tf_NombrePuffle = new javax.swing.JTextField();
+        ColorPuffle = new javax.swing.JLabel();
+        CCPuffleButton = new javax.swing.JButton();
+        PrecioPuffle = new javax.swing.JLabel();
+        tf_PrecioPuffle = new javax.swing.JTextField();
+        GuardarPuffleButton = new javax.swing.JButton();
         JuegosTab = new javax.swing.JPanel();
         PantallaAdmin = new javax.swing.JLabel();
         ClubPenguin = new javax.swing.JLabel();
@@ -155,28 +180,233 @@ public class Main extends javax.swing.JFrame {
 
         AdminTabbedPane.addTab("Items", ItemsTab);
 
+        TableCasa.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Nombre", "Tamaño", "Costo", "X", "Y"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        CasaScrollPane.setViewportView(TableCasa);
+        if (TableCasa.getColumnModel().getColumnCount() > 0) {
+            TableCasa.getColumnModel().getColumn(0).setResizable(false);
+            TableCasa.getColumnModel().getColumn(1).setResizable(false);
+            TableCasa.getColumnModel().getColumn(2).setResizable(false);
+            TableCasa.getColumnModel().getColumn(3).setResizable(false);
+            TableCasa.getColumnModel().getColumn(4).setResizable(false);
+        }
+
+        NombreCasa.setText("Nombre");
+
+        tf_NombreCasa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tf_NombreCasaActionPerformed(evt);
+            }
+        });
+
+        TamañoCasa.setText("Tamaño");
+
+        CostoCasa.setText("Costo");
+
+        XCasa.setText("X");
+
+        tf_XCasa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tf_XCasaActionPerformed(evt);
+            }
+        });
+
+        YCasa.setText("Y");
+
+        tf_YCasa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tf_YCasaActionPerformed(evt);
+            }
+        });
+
+        GuardarCasaButton.setText("Guardar");
+        GuardarCasaButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                GuardarCasaButtonMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout CasaTabLayout = new javax.swing.GroupLayout(CasaTab);
         CasaTab.setLayout(CasaTabLayout);
         CasaTabLayout.setHorizontalGroup(
             CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 372, Short.MAX_VALUE)
+            .addGroup(CasaTabLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(CasaScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 352, Short.MAX_VALUE)
+                    .addGroup(CasaTabLayout.createSequentialGroup()
+                        .addComponent(XCasa)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(tf_XCasa, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(CasaTabLayout.createSequentialGroup()
+                        .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tf_NombreCasa, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(NombreCasa))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tf_TamañoCasa, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TamañoCasa))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(CostoCasa)
+                            .addComponent(tf_CostoCasa, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap())
+            .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(CasaTabLayout.createSequentialGroup()
+                    .addGap(140, 140, 140)
+                    .addComponent(YCasa)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(tf_YCasa, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
+                    .addGap(18, 18, 18)
+                    .addComponent(GuardarCasaButton)
+                    .addGap(34, 34, 34)))
         );
         CasaTabLayout.setVerticalGroup(
             CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 222, Short.MAX_VALUE)
+            .addGroup(CasaTabLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(CasaScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(NombreCasa)
+                    .addComponent(TamañoCasa)
+                    .addComponent(CostoCasa))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf_NombreCasa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf_TamañoCasa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf_CostoCasa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(XCasa)
+                    .addComponent(tf_XCasa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(CasaTabLayout.createSequentialGroup()
+                    .addContainerGap(193, Short.MAX_VALUE)
+                    .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(YCasa)
+                        .addComponent(tf_YCasa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(GuardarCasaButton))
+                    .addContainerGap()))
         );
 
         AdminTabbedPane.addTab("Casa", CasaTab);
+
+        TablePuffles.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Nombre", "Color", "Precio"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.Object.class, java.lang.Integer.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        PufflesScrollPane.setViewportView(TablePuffles);
+        if (TablePuffles.getColumnModel().getColumnCount() > 0) {
+            TablePuffles.getColumnModel().getColumn(0).setResizable(false);
+            TablePuffles.getColumnModel().getColumn(1).setResizable(false);
+            TablePuffles.getColumnModel().getColumn(2).setResizable(false);
+        }
+
+        NombrePuffle.setText("Nombre");
+
+        ColorPuffle.setText("Color");
+
+        CCPuffleButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CCPuffleButtonMouseClicked(evt);
+            }
+        });
+
+        PrecioPuffle.setText("Precio");
+
+        GuardarPuffleButton.setText("Guardar");
+        GuardarPuffleButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                GuardarPuffleButtonMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout PufflesTabLayout = new javax.swing.GroupLayout(PufflesTab);
         PufflesTab.setLayout(PufflesTabLayout);
         PufflesTabLayout.setHorizontalGroup(
             PufflesTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 372, Short.MAX_VALUE)
+            .addGroup(PufflesTabLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(PufflesScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(PufflesTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PufflesTabLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(PufflesTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(NombrePuffle)
+                            .addComponent(ColorPuffle)
+                            .addComponent(CCPuffleButton, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+                            .addComponent(PrecioPuffle)
+                            .addComponent(tf_PrecioPuffle)
+                            .addComponent(tf_NombrePuffle))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PufflesTabLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
+                        .addComponent(GuardarPuffleButton)
+                        .addContainerGap())))
         );
         PufflesTabLayout.setVerticalGroup(
             PufflesTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 222, Short.MAX_VALUE)
+            .addGroup(PufflesTabLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(PufflesTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PufflesTabLayout.createSequentialGroup()
+                        .addComponent(NombrePuffle)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tf_NombrePuffle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(16, 16, 16)
+                        .addComponent(ColorPuffle)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(CCPuffleButton, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(PrecioPuffle)
+                        .addGap(4, 4, 4)
+                        .addComponent(tf_PrecioPuffle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                        .addComponent(GuardarPuffleButton))
+                    .addComponent(PufflesScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         AdminTabbedPane.addTab("Puffles", PufflesTab);
@@ -200,27 +430,23 @@ public class Main extends javax.swing.JFrame {
         AdminPane.getContentPane().setLayout(AdminPaneLayout);
         AdminPaneLayout.setHorizontalGroup(
             AdminPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AdminPaneLayout.createSequentialGroup()
+                .addContainerGap(11, Short.MAX_VALUE)
+                .addComponent(AdminTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(12, Short.MAX_VALUE))
             .addGroup(AdminPaneLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(PantallaAdmin)
-                .addContainerGap(265, Short.MAX_VALUE))
-            .addGroup(AdminPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AdminPaneLayout.createSequentialGroup()
-                    .addContainerGap(11, Short.MAX_VALUE)
-                    .addComponent(AdminTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(12, Short.MAX_VALUE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         AdminPaneLayout.setVerticalGroup(
             AdminPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AdminPaneLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AdminPaneLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(PantallaAdmin)
-                .addContainerGap(275, Short.MAX_VALUE))
-            .addGroup(AdminPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AdminPaneLayout.createSequentialGroup()
-                    .addContainerGap(39, Short.MAX_VALUE)
-                    .addComponent(AdminTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap()))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addComponent(AdminTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -292,10 +518,93 @@ public class Main extends javax.swing.JFrame {
 
     private void GuardarItemButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GuardarItemButtonMouseClicked
         String NombreItem = tf_NombreItem.getText();
-        String PrecioItem = tf_PrecioItem.getText();
+        int PrecioItem = Integer.parseInt(tf_PrecioItem.getText());
         String TipoItem = cb_TipoItem.getSelectedItem().toString();
-        Item i = new Item();
+        Item i = new Item(NombreItem, PrecioItem, TipoItem);
+        Items.add(i);
+        Object[] newrow = {
+            i.getNombreItem(),
+            i.getPrecioItem(),
+            i.getTipoItem()
+        };
+        DefaultTableModel modelo
+                = (DefaultTableModel) TableItems.getModel();
+        modelo.addRow(newrow);
+        TableItems.setModel(modelo);
+
+        tf_NombreItem.setText("");
+        tf_PrecioItem.setText("");
+        cb_TipoItem.setSelectedItem(-1);
+
     }//GEN-LAST:event_GuardarItemButtonMouseClicked
+
+    private void tf_NombreCasaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_NombreCasaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_NombreCasaActionPerformed
+
+    private void tf_XCasaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_XCasaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_XCasaActionPerformed
+
+    private void tf_YCasaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_YCasaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_YCasaActionPerformed
+
+    private void GuardarCasaButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GuardarCasaButtonMouseClicked
+
+        String NombreCasa = tf_NombreCasa.getText();
+        int TamañoCasa = Integer.parseInt(tf_TamañoCasa.getText());
+        int CostoCasa = Integer.parseInt(tf_CostoCasa.getText());
+        int xCasa = Integer.parseInt(tf_XCasa.getText());
+        int yCasa = Integer.parseInt(tf_YCasa.getText());
+
+        Casa c = new Casa(NombreCasa, NombreCasa, CostoCasa, xCasa, yCasa);
+        Casas.add(c);
+        Object[] newrow = {
+            c.getNombreCasa(),
+            c.getTamañoCasa(),
+            c.getCostoCasa(),
+            c.getCooXCasa(),
+            c.getCooYCasa()
+        };
+        DefaultTableModel modelo
+                = (DefaultTableModel) TableCasa.getModel();
+        modelo.addRow(newrow);
+        TableCasa.setModel(modelo);
+
+        tf_NombreCasa.setText("");
+        tf_TamañoCasa.setText("");
+        tf_CostoCasa.setText("");
+        tf_XCasa.setText("");
+        tf_YCasa.setText("");
+
+    }//GEN-LAST:event_GuardarCasaButtonMouseClicked
+
+    private void GuardarPuffleButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GuardarPuffleButtonMouseClicked
+        String PuffleNombre = tf_NombrePuffle.getText();
+        Color ColorPuffle = CCPuffleButton.getBackground();
+        int PrecioPuffle = Integer.parseInt(tf_PrecioPuffle.getText());
+        
+        Puffle p = new Puffle(PuffleNombre, PrecioPuffle, ColorPuffle);
+        Puffles.add(p);
+        Object[] newrow = {
+            p.getNombrePuffle(),
+            p.getColorPuffle(),
+            p.getPrecioPuffle()
+        };
+        DefaultTableModel modelo
+                = (DefaultTableModel) TablePuffles.getModel();
+        modelo.addRow(newrow);
+        TablePuffles.setModel(modelo);
+        tf_NombrePuffle.setText("");
+        CCPuffleButton.setBackground(null);
+        tf_PrecioPuffle.setText("");
+        
+    }//GEN-LAST:event_GuardarPuffleButtonMouseClicked
+
+    private void CCPuffleButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CCPuffleButtonMouseClicked
+        CCPuffleButton.setBackground(JColorChooser.showDialog(rootPane, "Seleccione un Color", Color.yellow));
+    }//GEN-LAST:event_CCPuffleButtonMouseClicked
 
     /**
      * @param args the command line arguments
@@ -335,28 +644,53 @@ public class Main extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDialog AdminPane;
     private javax.swing.JTabbedPane AdminTabbedPane;
+    private javax.swing.JButton CCPuffleButton;
+    private javax.swing.JScrollPane CasaScrollPane;
     private javax.swing.JPanel CasaTab;
     private javax.swing.JLabel ClubPenguin;
+    private javax.swing.JLabel ColorPuffle;
     private javax.swing.JLabel Contraseña;
+    private javax.swing.JLabel CostoCasa;
     private javax.swing.JButton EntrarButton;
+    private javax.swing.JButton GuardarCasaButton;
     private javax.swing.JButton GuardarItemButton;
+    private javax.swing.JButton GuardarPuffleButton;
     private javax.swing.JScrollPane ItemsScrollPane;
     private javax.swing.JPanel ItemsTab;
     private javax.swing.JPanel JuegosTab;
     private javax.swing.JLabel Nombre;
+    private javax.swing.JLabel NombreCasa;
     private javax.swing.JLabel NombreItem;
+    private javax.swing.JLabel NombrePuffle;
     private javax.swing.JLabel PantallaAdmin;
     private javax.swing.JLabel PrecioItem;
+    private javax.swing.JLabel PrecioPuffle;
+    private javax.swing.JScrollPane PufflesScrollPane;
     private javax.swing.JPanel PufflesTab;
+    private javax.swing.JTable TableCasa;
     private javax.swing.JTable TableItems;
+    private javax.swing.JTable TablePuffles;
+    private javax.swing.JLabel TamañoCasa;
     private javax.swing.JLabel TipoItem;
+    private javax.swing.JLabel XCasa;
+    private javax.swing.JLabel YCasa;
     private javax.swing.JComboBox<String> cb_TipoItem;
     private javax.swing.JTextField tf_Contraseña;
+    private javax.swing.JTextField tf_CostoCasa;
     private javax.swing.JTextField tf_Nombre;
+    private javax.swing.JTextField tf_NombreCasa;
     private javax.swing.JTextField tf_NombreItem;
+    private javax.swing.JTextField tf_NombrePuffle;
     private javax.swing.JTextField tf_PrecioItem;
+    private javax.swing.JTextField tf_PrecioPuffle;
+    private javax.swing.JTextField tf_TamañoCasa;
+    private javax.swing.JTextField tf_XCasa;
+    private javax.swing.JTextField tf_YCasa;
     // End of variables declaration//GEN-END:variables
     ArrayList<Pinguino> Users;
+    ArrayList<Item> Items = new ArrayList();
+    ArrayList<Casa> Casas = new ArrayList();
+    ArrayList<Puffle> Puffles = new ArrayList();
     String useradmin = "p", passwordadmin = "p";
 
 }

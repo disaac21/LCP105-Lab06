@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Casa {
     
+    public String NombreCasa;
     public String TamañoCasa;
     public int CostoCasa;
     public int CooXCasa;
@@ -13,14 +14,24 @@ public class Casa {
     public Casa() {
     }
     
-    public Casa(String TamañoCasa, int CostoCasa, int CooXCasa, int CooYCasa, ArrayList<Puffle> PufflesCasa) {
+    public Casa(String NombreCasa, String TamañoCasa, int CostoCasa, int CooXCasa, int CooYCasa) {
+        this.NombreCasa = NombreCasa;
         this.TamañoCasa = TamañoCasa;
         this.CostoCasa = CostoCasa;
         this.CooXCasa = CooXCasa;
         this.CooYCasa = CooYCasa;
-        this.PufflesCasa = PufflesCasa;
     }
 
+    public String getNombreCasa() {
+        return NombreCasa;
+    }
+
+    public void setNombreCasa(String NombreCasa) {
+        this.NombreCasa = NombreCasa;
+    }
+
+    
+    
     public String getTamañoCasa() {
         return TamañoCasa;
     }
@@ -63,7 +74,7 @@ public class Casa {
 
     @Override
     public String toString() {
-        return "Casa Tamanio: " + TamañoCasa + "& Costo: " + CostoCasa + "\n";
+        return "Casa: " + NombreCasa + "& Costo: " + CostoCasa + "\n";
     }
     
     
