@@ -72,6 +72,17 @@ public class Main extends javax.swing.JFrame {
         tf_PrecioPuffle = new javax.swing.JTextField();
         GuardarPuffleButton = new javax.swing.JButton();
         JuegosTab = new javax.swing.JPanel();
+        JuegosScrollPane = new javax.swing.JScrollPane();
+        TableJuegos = new javax.swing.JTable();
+        NombreJuego = new javax.swing.JLabel();
+        tf_NombreJuego = new javax.swing.JTextField();
+        CostoJuego = new javax.swing.JLabel();
+        tf_CostoJuego = new javax.swing.JTextField();
+        RecompensaJuego = new javax.swing.JLabel();
+        tf_RecompensaJuego = new javax.swing.JTextField();
+        ExitoJuego = new javax.swing.JLabel();
+        tf_ExitoJuego = new javax.swing.JTextField();
+        GuardarJuegoButton = new javax.swing.JButton();
         PantallaAdmin = new javax.swing.JLabel();
         ClubPenguin = new javax.swing.JLabel();
         Nombre = new javax.swing.JLabel();
@@ -168,13 +179,13 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(TipoItem)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cb_TipoItem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(GuardarItemButton)
                 .addContainerGap())
             .addGroup(ItemsTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ItemsTabLayout.createSequentialGroup()
                     .addGap(19, 19, 19)
-                    .addComponent(ItemsScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)
+                    .addComponent(ItemsScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
@@ -254,31 +265,34 @@ public class Main extends javax.swing.JFrame {
             .addGroup(CasaTabLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CasaScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 352, Short.MAX_VALUE)
+                    .addComponent(CasaScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addGroup(CasaTabLayout.createSequentialGroup()
-                        .addComponent(XCasa)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(tf_XCasa, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(CasaTabLayout.createSequentialGroup()
-                        .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(tf_NombreCasa, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(NombreCasa))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(tf_TamañoCasa, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(TamañoCasa))
+                        .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(CasaTabLayout.createSequentialGroup()
+                                .addComponent(XCasa)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(tf_XCasa, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(YCasa)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf_YCasa))
+                            .addGroup(CasaTabLayout.createSequentialGroup()
+                                .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(tf_NombreCasa, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(NombreCasa))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(tf_TamañoCasa, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(TamañoCasa))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(CostoCasa)
-                            .addComponent(tf_CostoCasa, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(tf_CostoCasa, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 9, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(CasaTabLayout.createSequentialGroup()
-                    .addGap(140, 140, 140)
-                    .addComponent(YCasa)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(tf_YCasa, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
-                    .addGap(18, 18, 18)
+                    .addContainerGap(267, Short.MAX_VALUE)
                     .addComponent(GuardarCasaButton)
                     .addGap(34, 34, 34)))
         );
@@ -300,15 +314,15 @@ public class Main extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(XCasa)
-                    .addComponent(tf_XCasa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(CasaTabLayout.createSequentialGroup()
-                    .addContainerGap(193, Short.MAX_VALUE)
+                    .addComponent(tf_XCasa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(YCasa)
-                        .addComponent(tf_YCasa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(GuardarCasaButton))
+                        .addComponent(tf_YCasa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(60, Short.MAX_VALUE))
+            .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(CasaTabLayout.createSequentialGroup()
+                    .addContainerGap(242, Short.MAX_VALUE)
+                    .addComponent(GuardarCasaButton)
                     .addContainerGap()))
         );
 
@@ -403,7 +417,7 @@ public class Main extends javax.swing.JFrame {
                         .addComponent(PrecioPuffle)
                         .addGap(4, 4, 4)
                         .addComponent(tf_PrecioPuffle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(GuardarPuffleButton))
                     .addComponent(PufflesScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addContainerGap())
@@ -411,15 +425,106 @@ public class Main extends javax.swing.JFrame {
 
         AdminTabbedPane.addTab("Puffles", PufflesTab);
 
+        TableJuegos.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Nombre", "Costo", "Recompensa", "Porcentaje"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        JuegosScrollPane.setViewportView(TableJuegos);
+        if (TableJuegos.getColumnModel().getColumnCount() > 0) {
+            TableJuegos.getColumnModel().getColumn(0).setResizable(false);
+            TableJuegos.getColumnModel().getColumn(1).setResizable(false);
+            TableJuegos.getColumnModel().getColumn(2).setResizable(false);
+            TableJuegos.getColumnModel().getColumn(3).setResizable(false);
+        }
+
+        NombreJuego.setText("Nombre");
+
+        CostoJuego.setText("Costo");
+
+        RecompensaJuego.setText("Recompensa");
+
+        ExitoJuego.setText("Posibilidad de Exito");
+
+        GuardarJuegoButton.setText("Guardar");
+        GuardarJuegoButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                GuardarJuegoButtonMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout JuegosTabLayout = new javax.swing.GroupLayout(JuegosTab);
         JuegosTab.setLayout(JuegosTabLayout);
         JuegosTabLayout.setHorizontalGroup(
             JuegosTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 372, Short.MAX_VALUE)
+            .addGroup(JuegosTabLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(JuegosScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(JuegosTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JuegosTabLayout.createSequentialGroup()
+                        .addGroup(JuegosTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tf_NombreJuego)
+                            .addComponent(tf_CostoJuego)
+                            .addComponent(tf_RecompensaJuego)
+                            .addGroup(JuegosTabLayout.createSequentialGroup()
+                                .addGroup(JuegosTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(NombreJuego)
+                                    .addComponent(CostoJuego)
+                                    .addComponent(RecompensaJuego)
+                                    .addComponent(ExitoJuego))
+                                .addGap(0, 41, Short.MAX_VALUE))
+                            .addComponent(tf_ExitoJuego))
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JuegosTabLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(GuardarJuegoButton))))
         );
         JuegosTabLayout.setVerticalGroup(
             JuegosTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 222, Short.MAX_VALUE)
+            .addGroup(JuegosTabLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(JuegosTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JuegosTabLayout.createSequentialGroup()
+                        .addComponent(JuegosScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(JuegosTabLayout.createSequentialGroup()
+                        .addComponent(NombreJuego)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tf_NombreJuego, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(CostoJuego)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tf_CostoJuego, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(RecompensaJuego)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tf_RecompensaJuego, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(ExitoJuego)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tf_ExitoJuego, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(32, 32, 32)
+                        .addComponent(GuardarJuegoButton)
+                        .addGap(0, 32, Short.MAX_VALUE))))
         );
 
         AdminTabbedPane.addTab("Juegos", JuegosTab);
@@ -444,9 +549,9 @@ public class Main extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AdminPaneLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(PantallaAdmin)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
-                .addComponent(AdminTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(18, 18, 18)
+                .addComponent(AdminTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -509,6 +614,8 @@ public class Main extends javax.swing.JFrame {
             AdminPane.pack();
             AdminPane.setLocationRelativeTo(this);
             AdminPane.setVisible(true);
+        } else {
+            
         }
     }//GEN-LAST:event_EntrarButtonMouseClicked
 
@@ -606,6 +713,29 @@ public class Main extends javax.swing.JFrame {
         CCPuffleButton.setBackground(JColorChooser.showDialog(rootPane, "Seleccione un Color", Color.yellow));
     }//GEN-LAST:event_CCPuffleButtonMouseClicked
 
+    private void GuardarJuegoButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GuardarJuegoButtonMouseClicked
+        
+        String JuegoNombre = tf_NombreJuego.getText();
+        int JuegoCosto = Integer.parseInt(tf_CostoJuego.getText());
+        int JuegoRecompensa = Integer.parseInt(tf_RecompensaJuego.getText());
+        int JuegoExito = Integer.parseInt(tf_ExitoJuego.getText());
+        Object[] newrow = {
+            JuegoNombre,
+            JuegoCosto,
+            JuegoRecompensa,
+            JuegoExito
+        };
+        DefaultTableModel modelo
+                = (DefaultTableModel) TableJuegos.getModel();
+        modelo.addRow(newrow);
+        TableJuegos.setModel(modelo);
+        tf_NombreJuego.setText("");
+        tf_CostoJuego.setText("");
+        tf_RecompensaJuego.setText("");
+        tf_ExitoJuego.setText("");
+        
+    }//GEN-LAST:event_GuardarJuegoButtonMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -651,24 +781,31 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel ColorPuffle;
     private javax.swing.JLabel Contraseña;
     private javax.swing.JLabel CostoCasa;
+    private javax.swing.JLabel CostoJuego;
     private javax.swing.JButton EntrarButton;
+    private javax.swing.JLabel ExitoJuego;
     private javax.swing.JButton GuardarCasaButton;
     private javax.swing.JButton GuardarItemButton;
+    private javax.swing.JButton GuardarJuegoButton;
     private javax.swing.JButton GuardarPuffleButton;
     private javax.swing.JScrollPane ItemsScrollPane;
     private javax.swing.JPanel ItemsTab;
+    private javax.swing.JScrollPane JuegosScrollPane;
     private javax.swing.JPanel JuegosTab;
     private javax.swing.JLabel Nombre;
     private javax.swing.JLabel NombreCasa;
     private javax.swing.JLabel NombreItem;
+    private javax.swing.JLabel NombreJuego;
     private javax.swing.JLabel NombrePuffle;
     private javax.swing.JLabel PantallaAdmin;
     private javax.swing.JLabel PrecioItem;
     private javax.swing.JLabel PrecioPuffle;
     private javax.swing.JScrollPane PufflesScrollPane;
     private javax.swing.JPanel PufflesTab;
+    private javax.swing.JLabel RecompensaJuego;
     private javax.swing.JTable TableCasa;
     private javax.swing.JTable TableItems;
+    private javax.swing.JTable TableJuegos;
     private javax.swing.JTable TablePuffles;
     private javax.swing.JLabel TamañoCasa;
     private javax.swing.JLabel TipoItem;
@@ -677,12 +814,16 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cb_TipoItem;
     private javax.swing.JTextField tf_Contraseña;
     private javax.swing.JTextField tf_CostoCasa;
+    private javax.swing.JTextField tf_CostoJuego;
+    private javax.swing.JTextField tf_ExitoJuego;
     private javax.swing.JTextField tf_Nombre;
     private javax.swing.JTextField tf_NombreCasa;
     private javax.swing.JTextField tf_NombreItem;
+    private javax.swing.JTextField tf_NombreJuego;
     private javax.swing.JTextField tf_NombrePuffle;
     private javax.swing.JTextField tf_PrecioItem;
     private javax.swing.JTextField tf_PrecioPuffle;
+    private javax.swing.JTextField tf_RecompensaJuego;
     private javax.swing.JTextField tf_TamañoCasa;
     private javax.swing.JTextField tf_XCasa;
     private javax.swing.JTextField tf_YCasa;
