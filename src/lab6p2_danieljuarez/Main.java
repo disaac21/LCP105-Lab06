@@ -1306,28 +1306,31 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_ComprarHouseButtonMouseClicked
 
     private void VenderHouseButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VenderHouseButtonMouseClicked
-        int cant = 0;
-        cant += Using.getCasaPinguino().getCostoCasa();
-        for (int i = 0; i < Using.getCasaPinguino().getPufflesCasa().size(); i++) {
-            cant += Using.getCasaPinguino().getPufflesCasa().get(i).PrecioPuffle;
+        if (StockTableCasa.getSelectedRow() >= 0) {
+            int cant = 0;
+            cant += Using.getCasaPinguino().CostoCasa;
+            for (int i = 0; i < Using.getCasaPinguino().getPufflesCasa().size(); i++) {
+                cant += Using.getCasaPinguino().getPufflesCasa().get(i).PrecioPuffle;
+            }
+            Using.DineroPinguino += cant;
+            Userdinero.setText("Dinero: " + Using.DineroPinguino);
+            Casa c = new Casa(Using.CasaPinguino.NombreCasa, Using.CasaPinguino.TamañoCasa, Using.CasaPinguino.CostoCasa, Using.CasaPinguino.CooXCasa, Using.CasaPinguino.CooYCasa);
+            Casas.add(c);
+            Object[] newrow = {
+                c.getNombreCasa(),
+                c.getTamañoCasa(),
+                c.getCostoCasa(),
+                c.getCooXCasa(),
+                c.getCooYCasa()
+            };
+            DefaultTableModel modelo
+                    = (DefaultTableModel) TableCasa.getModel();
+            modelo.addRow(newrow);
+            TableCasa.setModel(modelo);
+            StockTableCasa.setModel(modelo);
+        } else {
+            JOptionPane.showMessageDialog(rootPane, "No Hubo Venta");
         }
-        Using.DineroPinguino += cant;
-
-//        Casa c = new Casa(Using.CasaPinguino.NombreCasa, Using.CasaPinguino.TamañoCasa, Using.CasaPinguino.CostoCasa, Using.CasaPinguino.CooXCasa, Using.CasaPinguino.CooYCasa);
-//        Casas.add(c);
-//        Object[] newrow = {
-//            c.getNombreCasa(),
-//            c.getTamañoCasa(),
-//            c.getCostoCasa(),
-//            c.getCooXCasa(),
-//            c.getCooYCasa()
-//        };
-//        DefaultTableModel modelo
-//                = (DefaultTableModel) TableCasa.getModel();
-//        modelo.addRow(newrow);
-//        TableCasa.setModel(modelo);
-//        StockTableCasa.setModel(modelo);
-
     }//GEN-LAST:event_VenderHouseButtonMouseClicked
 
     private void ComprarPuffleButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ComprarPuffleButtonMouseClicked
@@ -1355,18 +1358,23 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_ComprarPuffleButtonMouseClicked
 
     private void JugarButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JugarButtonMouseClicked
-        int numero = 0 + random.nextInt(100);
-        int resta = (int) TableJuegos1.getValueAt(TableJuegos1.getSelectedRow(), 1);
-        Using.DineroPinguino = Using.DineroPinguino - resta;
-        Userdinero.setText("Dinero: " + Using.DineroPinguino);
-        if (numero < (int) TableJuegos1.getValueAt(TableJuegos1.getSelectedRow(), 3)) {
-            JOptionPane.showMessageDialog(rootPane, "Ganó!" + TableJuegos1.getValueAt(TableJuegos1.getSelectedRow(), 2));
-            int suma = (int) TableJuegos1.getValueAt(TableJuegos1.getSelectedRow(), 2);
-            Using.DineroPinguino = Using.DineroPinguino + suma;
+        if (TableJuegos1.getSelectedRow() >= 0) {
+            int numero = 0 + random.nextInt(100);
+            int resta = (int) TableJuegos1.getValueAt(TableJuegos1.getSelectedRow(), 1);
+            Using.DineroPinguino = Using.DineroPinguino - resta;
             Userdinero.setText("Dinero: " + Using.DineroPinguino);
+            if (numero < (int) TableJuegos1.getValueAt(TableJuegos1.getSelectedRow(), 3)) {
+                JOptionPane.showMessageDialog(rootPane, "Ganó!" + TableJuegos1.getValueAt(TableJuegos1.getSelectedRow(), 2));
+                int suma = (int) TableJuegos1.getValueAt(TableJuegos1.getSelectedRow(), 2);
+                Using.DineroPinguino = Using.DineroPinguino + suma;
+                Userdinero.setText("Dinero: " + Using.DineroPinguino);
+            } else {
+                JOptionPane.showMessageDialog(rootPane, "Perdió!");
+            }
         } else {
-            JOptionPane.showMessageDialog(rootPane, "Perdió!");
+            JOptionPane.showMessageDialog(rootPane, "No Hay Juegos Disponibles");
         }
+
     }//GEN-LAST:event_JugarButtonMouseClicked
 
     private void tf_NombreJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_NombreJuegoActionPerformed
