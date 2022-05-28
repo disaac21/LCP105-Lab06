@@ -29,8 +29,6 @@ public class Casa {
     public void setNombreCasa(String NombreCasa) {
         this.NombreCasa = NombreCasa;
     }
-
-    
     
     public String getTamañoCasa() {
         return TamañoCasa;

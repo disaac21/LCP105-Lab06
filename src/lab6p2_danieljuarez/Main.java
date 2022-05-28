@@ -1284,21 +1284,27 @@ public class Main extends javax.swing.JFrame {
 
     private void ComprarHouseButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ComprarHouseButtonMouseClicked
         if (StockTableCasa.getSelectedRow() >= 0) {
-            if ((int) StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 2) > Using.DineroPinguino) {
-                JOptionPane.showMessageDialog(rootPane, "No Hubo Compra. Dinero Insuficiente");
-            } else {
+            if (Using.SocioPinguino == true) {
+                if ((int) StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 2) > Using.DineroPinguino) {
+                    JOptionPane.showMessageDialog(rootPane, "No Hubo Compra. Dinero Insuficiente");
+                } else {
 ////            DefaultTableModel modelostock
 ////                    = (DefaultTableModel) StockTableItems.getModel();
-                int resta = (int) StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 2);
-                Using.DineroPinguino = Using.DineroPinguino - resta;
-                Userdinero.setText("Dinero: " + Using.DineroPinguino);
-                Using.CasaPinguino.setNombreCasa((String) StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 0));
-                Using.CasaPinguino.setTamañoCasa((String) StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 1));
-                Using.CasaPinguino.setCostoCasa((int) StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 2));
-                Using.CasaPinguino.setCooXCasa((int) StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 3));
-                Using.CasaPinguino.setCooYCasa((int) StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 4));
+                    int resta = (int) StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 2);
+                    Using.DineroPinguino = Using.DineroPinguino - resta;
+                    Userdinero.setText("Dinero: " + Using.DineroPinguino);
+                    Using.CasaPinguino.setNombreCasa((String) StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 0));
+                    Using.CasaPinguino.setTamañoCasa((String) StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 1));
+                    Using.CasaPinguino.setCostoCasa((int) StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 2));
+                    Using.CasaPinguino.setCooXCasa((int) StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 3));
+                    Using.CasaPinguino.setCooYCasa((int) StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 4));
 //            modelostock.removeRow(StockTableCasa.getSelectedRow());
 //            StockTableCasa.setModel(modelostock);
+                }
+            } else {
+                if ((int)StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 2) > 200) {
+                    JOptionPane.showMessageDialog(rootPane, "No Puede Comprar Casas Mayores a 200m^2, Upgrade a Premium");
+                }
             }
         } else {
             JOptionPane.showMessageDialog(rootPane, "No Hubo Compra");
@@ -1335,22 +1341,29 @@ public class Main extends javax.swing.JFrame {
 
     private void ComprarPuffleButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ComprarPuffleButtonMouseClicked
         if (TableStockPuffles.getSelectedRow() >= 0) {
-            if ((int) TableStockPuffles.getValueAt(TableStockPuffles.getSelectedRow(), 2) > Using.DineroPinguino) {
-                JOptionPane.showMessageDialog(rootPane, "No Hubo Compra. Dinero Insuficiente");
-            } else {
+
+            if (Using.SocioPinguino == true) {
+                if ((int) TableStockPuffles.getValueAt(TableStockPuffles.getSelectedRow(), 2) > Using.DineroPinguino) {
+                    JOptionPane.showMessageDialog(rootPane, "No Hubo Compra. Dinero Insuficiente");
+                } else {
 //            DefaultTableModel modelostock
 //                    = (DefaultTableModel) StockTableItems.getModel();
-                DefaultTableModel modelo
-                        = (DefaultTableModel) TableMisPuffles.getModel();
-                int resta = (int) TableStockPuffles.getValueAt(TableStockPuffles.getSelectedRow(), 2);
-                Using.DineroPinguino = Using.DineroPinguino - resta;
-                Userdinero.setText("Dinero: " + Using.DineroPinguino);
-                Object[] newrow = {
-                    TableStockPuffles.getValueAt(TableStockPuffles.getSelectedRow(), 0),
-                    TableStockPuffles.getValueAt(TableStockPuffles.getSelectedRow(), 1)
-                };
-                modelo.addRow(newrow);
-                TableMisPuffles.setModel(modelo);
+                    DefaultTableModel modelo
+                            = (DefaultTableModel) TableMisPuffles.getModel();
+                    int resta = (int) TableStockPuffles.getValueAt(TableStockPuffles.getSelectedRow(), 2);
+                    Using.DineroPinguino = Using.DineroPinguino - resta;
+                    Userdinero.setText("Dinero: " + Using.DineroPinguino);
+                    Object[] newrow = {
+                        TableStockPuffles.getValueAt(TableStockPuffles.getSelectedRow(), 0),
+                        TableStockPuffles.getValueAt(TableStockPuffles.getSelectedRow(), 1)
+                    };
+                    modelo.addRow(newrow);
+                    TableMisPuffles.setModel(modelo);
+                }
+            } else {
+                if (Using.CasaPinguino.PufflesCasa.size() == 2) {
+                    JOptionPane.showMessageDialog(rootPane, "Ya No Puede Comprar Más Puffles, Upgrade a Premium");
+                }
             }
         } else {
             JOptionPane.showMessageDialog(rootPane, "No Hubo Compra");
