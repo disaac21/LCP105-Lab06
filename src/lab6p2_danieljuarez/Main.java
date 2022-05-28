@@ -7,6 +7,7 @@ package lab6p2_danieljuarez;
 
 import java.awt.Color;
 import java.util.ArrayList;
+import java.util.Random;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JColorChooser;
 import javax.swing.JOptionPane;
@@ -18,9 +19,8 @@ import javax.swing.table.DefaultTableModel;
  */
 public class Main extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Main
-     */
+    static Random random = new Random();
+
     public Main() {
 
         initComponents();
@@ -145,7 +145,6 @@ public class Main extends javax.swing.JFrame {
             TableItems.getColumnModel().getColumn(0).setResizable(false);
             TableItems.getColumnModel().getColumn(1).setResizable(false);
             TableItems.getColumnModel().getColumn(2).setResizable(false);
-            TableItems.getColumnModel().getColumn(2).setHeaderValue("Precio");
         }
 
         NombreItem.setText("Nombre");
@@ -251,7 +250,6 @@ public class Main extends javax.swing.JFrame {
             TableCasa.getColumnModel().getColumn(0).setResizable(false);
             TableCasa.getColumnModel().getColumn(1).setResizable(false);
             TableCasa.getColumnModel().getColumn(2).setResizable(false);
-            TableCasa.getColumnModel().getColumn(2).setHeaderValue("Precio");
             TableCasa.getColumnModel().getColumn(3).setResizable(false);
             TableCasa.getColumnModel().getColumn(4).setResizable(false);
         }
@@ -303,7 +301,7 @@ public class Main extends javax.swing.JFrame {
             .addGroup(CasaTabLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CasaScrollPane)
+                    .addComponent(CasaScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addGroup(CasaTabLayout.createSequentialGroup()
                         .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(CasaTabLayout.createSequentialGroup()
@@ -326,11 +324,11 @@ public class Main extends javax.swing.JFrame {
                         .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(CostoCasa)
                             .addComponent(tf_CostoCasa, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 9, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(CasaTabLayout.createSequentialGroup()
-                    .addContainerGap(367, Short.MAX_VALUE)
+                    .addContainerGap(267, Short.MAX_VALUE)
                     .addComponent(GuardarCasaButton)
                     .addGap(34, 34, 34)))
         );
@@ -394,7 +392,6 @@ public class Main extends javax.swing.JFrame {
             TablePuffles.getColumnModel().getColumn(0).setResizable(false);
             TablePuffles.getColumnModel().getColumn(1).setResizable(false);
             TablePuffles.getColumnModel().getColumn(2).setResizable(false);
-            TablePuffles.getColumnModel().getColumn(2).setHeaderValue("Precio");
         }
 
         NombrePuffle.setText("Nombre");
@@ -435,7 +432,7 @@ public class Main extends javax.swing.JFrame {
                             .addComponent(tf_NombrePuffle))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PufflesTabLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 171, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
                         .addComponent(GuardarPuffleButton)
                         .addContainerGap())))
         );
@@ -492,7 +489,6 @@ public class Main extends javax.swing.JFrame {
             TableJuegos.getColumnModel().getColumn(0).setResizable(false);
             TableJuegos.getColumnModel().getColumn(1).setResizable(false);
             TableJuegos.getColumnModel().getColumn(2).setResizable(false);
-            TableJuegos.getColumnModel().getColumn(2).setHeaderValue("Precio");
             TableJuegos.getColumnModel().getColumn(3).setResizable(false);
         }
 
@@ -531,7 +527,7 @@ public class Main extends javax.swing.JFrame {
                                     .addComponent(CostoJuego)
                                     .addComponent(RecompensaJuego)
                                     .addComponent(ExitoJuego))
-                                .addGap(0, 141, Short.MAX_VALUE))
+                                .addGap(0, 41, Short.MAX_VALUE))
                             .addComponent(tf_ExitoJuego))
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JuegosTabLayout.createSequentialGroup()
@@ -636,7 +632,6 @@ public class Main extends javax.swing.JFrame {
             StockTableItems.getColumnModel().getColumn(0).setResizable(false);
             StockTableItems.getColumnModel().getColumn(1).setResizable(false);
             StockTableItems.getColumnModel().getColumn(2).setResizable(false);
-            StockTableItems.getColumnModel().getColumn(2).setHeaderValue("Precio");
         }
 
         TableMisItems.setModel(new javax.swing.table.DefaultTableModel(
@@ -704,6 +699,11 @@ public class Main extends javax.swing.JFrame {
         });
 
         VenderHouseButton.setText("Vender");
+        VenderHouseButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                VenderHouseButtonMouseClicked(evt);
+            }
+        });
 
         StockTableCasa.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -733,7 +733,6 @@ public class Main extends javax.swing.JFrame {
             StockTableCasa.getColumnModel().getColumn(0).setResizable(false);
             StockTableCasa.getColumnModel().getColumn(1).setResizable(false);
             StockTableCasa.getColumnModel().getColumn(2).setResizable(false);
-            StockTableCasa.getColumnModel().getColumn(2).setHeaderValue("Precio");
             StockTableCasa.getColumnModel().getColumn(3).setResizable(false);
             StockTableCasa.getColumnModel().getColumn(4).setResizable(false);
         }
@@ -824,10 +823,14 @@ public class Main extends javax.swing.JFrame {
             TableStockPuffles.getColumnModel().getColumn(0).setResizable(false);
             TableStockPuffles.getColumnModel().getColumn(1).setResizable(false);
             TableStockPuffles.getColumnModel().getColumn(2).setResizable(false);
-            TableStockPuffles.getColumnModel().getColumn(2).setHeaderValue("Precio");
         }
 
         ComprarPuffleButton.setText("Comprar");
+        ComprarPuffleButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ComprarPuffleButtonMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout MiCasaTabLayout = new javax.swing.GroupLayout(MiCasaTab);
         MiCasaTab.setLayout(MiCasaTabLayout);
@@ -886,11 +889,15 @@ public class Main extends javax.swing.JFrame {
             TableJuegos1.getColumnModel().getColumn(0).setResizable(false);
             TableJuegos1.getColumnModel().getColumn(1).setResizable(false);
             TableJuegos1.getColumnModel().getColumn(2).setResizable(false);
-            TableJuegos1.getColumnModel().getColumn(2).setHeaderValue("Precio");
             TableJuegos1.getColumnModel().getColumn(3).setResizable(false);
         }
 
         JugarButton.setText("Jugar");
+        JugarButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JugarButtonMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout JuegosTab1Layout = new javax.swing.GroupLayout(JuegosTab1);
         JuegosTab1.setLayout(JuegosTab1Layout);
@@ -1144,12 +1151,12 @@ public class Main extends javax.swing.JFrame {
     private void GuardarCasaButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GuardarCasaButtonMouseClicked
 
         String NombreCasa = tf_NombreCasa.getText();
-        int TamañoCasa = Integer.parseInt(tf_TamañoCasa.getText());
+        String TamañoCasa = tf_TamañoCasa.getText();
         int CostoCasa = Integer.parseInt(tf_CostoCasa.getText());
         int xCasa = Integer.parseInt(tf_XCasa.getText());
         int yCasa = Integer.parseInt(tf_YCasa.getText());
 
-        Casa c = new Casa(NombreCasa, NombreCasa, CostoCasa, xCasa, yCasa);
+        Casa c = new Casa(NombreCasa, TamañoCasa, CostoCasa, xCasa, yCasa);
         Casas.add(c);
         Object[] newrow = {
             c.getNombreCasa(),
@@ -1266,23 +1273,83 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_PremiumButtonMouseClicked
 
     private void ComprarHouseButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ComprarHouseButtonMouseClicked
-        if (StockTableCasa.getSelectedRow() > -1) {
-            DefaultTableModel modelostock
-                    = (DefaultTableModel) StockTableItems.getModel();
+        if (StockTableCasa.getSelectedRow() >= 0) {
+////            DefaultTableModel modelostock
+////                    = (DefaultTableModel) StockTableItems.getModel();
             int resta = (int) StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 2);
             Using.DineroPinguino = Using.DineroPinguino - resta;
             Userdinero.setText("Dinero: " + Using.DineroPinguino);
-            Using.CasaPinguino.setNombreCasa((String)StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 0));
-            Using.CasaPinguino.setTamañoCasa((String)StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 1));
-            Using.CasaPinguino.setCostoCasa((int)StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 2));
-            Using.CasaPinguino.setCooXCasa((int)StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 3));
-            Using.CasaPinguino.setCooYCasa((int)StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 4));
-            modelostock.removeRow(StockTableCasa.getSelectedRow());
-            StockTableCasa.setModel(modelostock);
+            Using.CasaPinguino.setNombreCasa((String) StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 0));
+            Using.CasaPinguino.setTamañoCasa((String) StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 1));
+            Using.CasaPinguino.setCostoCasa((int) StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 2));
+            Using.CasaPinguino.setCooXCasa((int) StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 3));
+            Using.CasaPinguino.setCooYCasa((int) StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 4));
+//            modelostock.removeRow(StockTableCasa.getSelectedRow());
+//            StockTableCasa.setModel(modelostock);
         } else {
             JOptionPane.showMessageDialog(rootPane, "No Hubo Compra");
         }
     }//GEN-LAST:event_ComprarHouseButtonMouseClicked
+
+    private void VenderHouseButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VenderHouseButtonMouseClicked
+        int cant = 0;
+        cant += Using.getCasaPinguino().getCostoCasa();
+        for (int i = 0; i < Using.getCasaPinguino().getPufflesCasa().size(); i++) {
+            cant += Using.getCasaPinguino().getPufflesCasa().get(i).PrecioPuffle;
+        }
+        Using.DineroPinguino += cant;
+
+//        Casa c = new Casa(Using.CasaPinguino.NombreCasa, Using.CasaPinguino.TamañoCasa, Using.CasaPinguino.CostoCasa, Using.CasaPinguino.CooXCasa, Using.CasaPinguino.CooYCasa);
+//        Casas.add(c);
+//        Object[] newrow = {
+//            c.getNombreCasa(),
+//            c.getTamañoCasa(),
+//            c.getCostoCasa(),
+//            c.getCooXCasa(),
+//            c.getCooYCasa()
+//        };
+//        DefaultTableModel modelo
+//                = (DefaultTableModel) TableCasa.getModel();
+//        modelo.addRow(newrow);
+//        TableCasa.setModel(modelo);
+//        StockTableCasa.setModel(modelo);
+
+    }//GEN-LAST:event_VenderHouseButtonMouseClicked
+
+    private void ComprarPuffleButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ComprarPuffleButtonMouseClicked
+        if (TableStockPuffles.getSelectedRow() >= 0) {
+//            DefaultTableModel modelostock
+//                    = (DefaultTableModel) StockTableItems.getModel();
+            DefaultTableModel modelo
+                    = (DefaultTableModel) TableMisPuffles.getModel();
+            int resta = (int) TableStockPuffles.getValueAt(TableStockPuffles.getSelectedRow(), 2);
+            Using.DineroPinguino = Using.DineroPinguino - resta;
+            Userdinero.setText("Dinero: " + Using.DineroPinguino);
+            Object[] newrow = {
+                TableStockPuffles.getValueAt(TableStockPuffles.getSelectedRow(), 0),
+                TableStockPuffles.getValueAt(TableStockPuffles.getSelectedRow(), 1)
+            };
+            modelo.addRow(newrow);
+            TableMisPuffles.setModel(modelo);
+        } else {
+            JOptionPane.showMessageDialog(rootPane, "No Hubo Compra");
+        }
+    }//GEN-LAST:event_ComprarPuffleButtonMouseClicked
+
+    private void JugarButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JugarButtonMouseClicked
+        int numero = 0 + random.nextInt(100);
+        int resta = (int) TableJuegos1.getValueAt(TableJuegos1.getSelectedRow(), 1);
+        Using.DineroPinguino = Using.DineroPinguino - resta;
+        Userdinero.setText("Dinero: " + Using.DineroPinguino);
+        if (numero < (int) TableJuegos1.getValueAt(TableJuegos1.getSelectedRow(), 3)) {
+            JOptionPane.showMessageDialog(rootPane, "Ganó!" + TableJuegos1.getValueAt(TableJuegos1.getSelectedRow(), 2));
+            int suma = (int) TableJuegos1.getValueAt(TableJuegos1.getSelectedRow(), 2);
+            Using.DineroPinguino = Using.DineroPinguino + suma;
+            Userdinero.setText("Dinero: " + Using.DineroPinguino);
+        } else {
+            JOptionPane.showMessageDialog(rootPane, "Perdió!");
+        }
+    }//GEN-LAST:event_JugarButtonMouseClicked
 
     /**
      * @param args the command line arguments

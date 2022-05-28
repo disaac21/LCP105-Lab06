@@ -129,7 +129,7 @@
                               <Renderer/>
                             </Column>
                             <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
-                              <Title value="Precio"/>
+                              <Title/>
                               <Editor/>
                               <Renderer/>
                             </Column>
@@ -208,7 +208,7 @@
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="CasaScrollPane" max="32767" attributes="0"/>
+                              <Component id="CasaScrollPane" pref="0" max="32767" attributes="0"/>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
@@ -237,14 +237,14 @@
                                       <Component id="CostoCasa" min="-2" max="-2" attributes="0"/>
                                       <Component id="tf_CostoCasa" min="-2" pref="109" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="9" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace pref="367" max="32767" attributes="0"/>
+                              <EmptySpace pref="267" max="32767" attributes="0"/>
                               <Component id="GuardarCasaButton" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                           </Group>
@@ -321,7 +321,7 @@
                               <Renderer/>
                             </Column>
                             <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
-                              <Title value="Precio"/>
+                              <Title/>
                               <Editor/>
                               <Renderer/>
                             </Column>
@@ -428,7 +428,7 @@
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="171" max="32767" attributes="0"/>
+                                  <EmptySpace pref="71" max="32767" attributes="0"/>
                                   <Component id="GuardarPuffleButton" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -493,7 +493,7 @@
                               <Renderer/>
                             </Column>
                             <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
-                              <Title value="Precio"/>
+                              <Title/>
                               <Editor/>
                               <Renderer/>
                             </Column>
@@ -569,7 +569,7 @@
                                               <Component id="RecompensaJuego" min="-2" max="-2" attributes="0"/>
                                               <Component id="ExitoJuego" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace min="0" pref="141" max="32767" attributes="0"/>
+                                          <EmptySpace min="0" pref="41" max="32767" attributes="0"/>
                                       </Group>
                                       <Component id="tf_ExitoJuego" alignment="0" max="32767" attributes="0"/>
                                   </Group>
@@ -648,7 +648,7 @@
                               <Renderer/>
                             </Column>
                             <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
-                              <Title value="Precio"/>
+                              <Title/>
                               <Editor/>
                               <Renderer/>
                             </Column>
@@ -853,7 +853,7 @@
                               <Renderer/>
                             </Column>
                             <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
-                              <Title value="Precio"/>
+                              <Title/>
                               <Editor/>
                               <Renderer/>
                             </Column>
@@ -959,6 +959,9 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Vender"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="VenderHouseButtonMouseClicked"/>
+                  </Events>
                 </Component>
                 <Container class="javax.swing.JScrollPane" name="StockCasasScrollPane">
                   <AuxValues>
@@ -991,7 +994,7 @@
                               <Renderer/>
                             </Column>
                             <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
-                              <Title value="Precio"/>
+                              <Title/>
                               <Editor/>
                               <Renderer/>
                             </Column>
@@ -1124,7 +1127,7 @@
                               <Renderer/>
                             </Column>
                             <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
-                              <Title value="Precio"/>
+                              <Title/>
                               <Editor/>
                               <Renderer/>
                             </Column>
@@ -1141,6 +1144,9 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Comprar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="ComprarPuffleButtonMouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -1212,7 +1218,7 @@
                               <Renderer/>
                             </Column>
                             <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
-                              <Title value="Precio"/>
+                              <Title/>
                               <Editor/>
                               <Renderer/>
                             </Column>
@@ -1234,6 +1240,9 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Jugar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="JugarButtonMouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
