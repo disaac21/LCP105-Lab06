@@ -9,7 +9,7 @@ public class Casa {
     public int CostoCasa;
     public int CooXCasa;
     public int CooYCasa;
-    public ArrayList <Puffle> PufflesCasa;
+    public ArrayList <Puffle> PufflesCasa = new ArrayList();
 
     public Casa() {
     }

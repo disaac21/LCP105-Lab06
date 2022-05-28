@@ -7,15 +7,16 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="11" max="32767" attributes="0"/>
-                  <Component id="AdminTabbedPane" min="-2" pref="377" max="-2" attributes="0"/>
-                  <EmptySpace pref="12" max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
+              <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="PantallaAdmin" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="PantallaAdmin" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                      <Component id="AdminTabbedPane" pref="566" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -24,9 +25,9 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="PantallaAdmin" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="AdminTabbedPane" min="-2" pref="304" max="-2" attributes="0"/>
-                  <EmptySpace pref="22" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="AdminTabbedPane" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -49,23 +50,25 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="224" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="TipoItem" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="PrecioItem" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="tf_PrecioItem" alignment="0" pref="131" max="32767" attributes="0"/>
-                              <Component id="NombreItem" min="-2" max="-2" attributes="0"/>
-                              <Component id="tf_NombreItem" max="32767" attributes="0"/>
-                              <Component id="cb_TipoItem" max="32767" attributes="0"/>
-                              <Component id="GuardarItemButton" max="32767" attributes="0"/>
+                          <EmptySpace pref="369" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="TipoItem" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="PrecioItem" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="tf_PrecioItem" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="NombreItem" min="-2" max="-2" attributes="0"/>
+                                  <Component id="tf_NombreItem" max="32767" attributes="0"/>
+                                  <Component id="cb_TipoItem" min="-2" pref="131" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="GuardarItemButton" min="-2" pref="131" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="ItemsScrollPane" min="-2" pref="202" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="260" max="-2" attributes="0"/>
+                              <EmptySpace pref="99" max="32767" attributes="0"/>
+                              <Component id="ItemsScrollPane" min="-2" pref="249" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="213" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -73,7 +76,7 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                           <Component id="NombreItem" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="tf_NombreItem" min="-2" max="-2" attributes="0"/>
@@ -85,14 +88,14 @@
                           <Component id="TipoItem" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="cb_TipoItem" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                           <Component id="GuardarItemButton" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace pref="112" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                              <Component id="ItemsScrollPane" pref="246" max="32767" attributes="0"/>
+                              <Component id="ItemsScrollPane" pref="313" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -208,7 +211,7 @@
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="CasaScrollPane" pref="0" max="32767" attributes="0"/>
+                              <Component id="CasaScrollPane" pref="541" max="32767" attributes="0"/>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
@@ -232,22 +235,23 @@
                                           </Group>
                                       </Group>
                                   </Group>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="CostoCasa" min="-2" max="-2" attributes="0"/>
-                                      <Component id="tf_CostoCasa" min="-2" pref="109" max="-2" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="CostoCasa" min="-2" max="-2" attributes="0"/>
+                                              <Component id="tf_CostoCasa" min="-2" pref="109" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
+                                          <Component id="GuardarCasaButton" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
-                                  <EmptySpace min="0" pref="9" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace pref="267" max="32767" attributes="0"/>
-                              <Component id="GuardarCasaButton" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                          </Group>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -262,29 +266,28 @@
                               <Component id="TamañoCasa" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="CostoCasa" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="tf_NombreCasa" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="tf_TamañoCasa" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="tf_CostoCasa" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="XCasa" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="tf_XCasa" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" alignment="3" groupAlignment="3" attributes="0">
-                                  <Component id="YCasa" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="tf_YCasa" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="tf_NombreCasa" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="tf_TamañoCasa" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="tf_CostoCasa" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="XCasa" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="tf_XCasa" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="YCasa" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="tf_YCasa" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                                  <Component id="GuardarCasaButton" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="60" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace pref="242" max="32767" attributes="0"/>
-                              <Component id="GuardarCasaButton" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                          </Group>
+                          <EmptySpace pref="115" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -413,24 +416,23 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="PufflesScrollPane" min="-2" pref="210" max="-2" attributes="0"/>
+                          <Component id="PufflesScrollPane" min="-2" pref="258" max="-2" attributes="0"/>
+                          <EmptySpace pref="110" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="GuardarPuffleButton" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Component id="NombrePuffle" min="-2" max="-2" attributes="0"/>
                                       <Component id="ColorPuffle" min="-2" max="-2" attributes="0"/>
-                                      <Component id="CCPuffleButton" pref="110" max="32767" attributes="0"/>
+                                      <Component id="CCPuffleButton" max="32767" attributes="0"/>
                                       <Component id="PrecioPuffle" min="-2" max="-2" attributes="0"/>
                                       <Component id="tf_PrecioPuffle" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="tf_NombrePuffle" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="tf_NombrePuffle" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="71" max="32767" attributes="0"/>
-                                  <Component id="GuardarPuffleButton" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -441,7 +443,8 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
+                              <Component id="PufflesScrollPane" alignment="0" pref="0" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
                                   <Component id="NombrePuffle" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="tf_NombrePuffle" min="-2" max="-2" attributes="0"/>
@@ -453,10 +456,10 @@
                                   <Component id="PrecioPuffle" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                                   <Component id="tf_PrecioPuffle" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
                                   <Component id="GuardarPuffleButton" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="86" max="32767" attributes="0"/>
                               </Group>
-                              <Component id="PufflesScrollPane" pref="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -554,32 +557,25 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="JuegosScrollPane" min="-2" pref="210" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="JuegosScrollPane" min="-2" pref="379" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="tf_NombreJuego" max="32767" attributes="0"/>
-                                      <Component id="tf_CostoJuego" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="tf_RecompensaJuego" alignment="0" max="32767" attributes="0"/>
-                                      <Group type="102" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="NombreJuego" min="-2" max="-2" attributes="0"/>
-                                              <Component id="CostoJuego" min="-2" max="-2" attributes="0"/>
-                                              <Component id="RecompensaJuego" min="-2" max="-2" attributes="0"/>
-                                              <Component id="ExitoJuego" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace min="0" pref="41" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Component id="tf_ExitoJuego" alignment="0" max="32767" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
                                   <Component id="GuardarJuegoButton" min="-2" max="-2" attributes="0"/>
                               </Group>
+                              <Component id="NombreJuego" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="CostoJuego" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="RecompensaJuego" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="ExitoJuego" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="tf_ExitoJuego" alignment="0" pref="126" max="32767" attributes="0"/>
+                                  <Component id="tf_RecompensaJuego" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="tf_CostoJuego" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="tf_NombreJuego" alignment="0" max="32767" attributes="0"/>
+                              </Group>
                           </Group>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -608,9 +604,9 @@
                                   <Component id="ExitoJuego" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="tf_ExitoJuego" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                                   <Component id="GuardarJuegoButton" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="32" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="94" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -672,6 +668,9 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tf_NombreJuego">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tf_NombreJuegoActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="CostoJuego">
                   <Properties>
@@ -726,15 +725,15 @@
                   <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="164" max="32767" attributes="0"/>
+                  <EmptySpace pref="342" max="32767" attributes="0"/>
                   <Component id="PremiumButton" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="161" max="-2" attributes="0"/>
               </Group>
               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                      <Component id="UserTabbedPane" min="-2" pref="377" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="UserTabbedPane" min="-2" pref="535" max="-2" attributes="0"/>
+                      <EmptySpace pref="30" max="32767" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -747,15 +746,15 @@
                       <Component id="Username" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="Userdinero" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="310" max="32767" attributes="0"/>
+                  <EmptySpace pref="355" max="32767" attributes="0"/>
                   <Component id="PremiumButton" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                      <Component id="UserTabbedPane" min="-2" pref="304" max="-2" attributes="0"/>
-                      <EmptySpace pref="33" max="32767" attributes="0"/>
+                      <Component id="UserTabbedPane" min="-2" pref="331" max="-2" attributes="0"/>
+                      <EmptySpace pref="51" max="32767" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -786,13 +785,13 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                          <Component id="MisItemsScrollPane" pref="0" max="32767" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="MisItemsScrollPane" min="-2" pref="261" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="StockItemsScrollPane" pref="0" max="32767" attributes="0"/>
-                              <Component id="ComprarItemButton" pref="177" max="32767" attributes="0"/>
+                              <Component id="ComprarItemButton" pref="247" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -803,7 +802,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="MisItemsScrollPane" pref="254" max="32767" attributes="0"/>
+                              <Component id="MisItemsScrollPane" pref="281" max="32767" attributes="0"/>
                               <Group type="102" attributes="0">
                                   <Component id="ComprarItemButton" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -822,6 +821,7 @@
                   </Properties>
                   <Events>
                     <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="ComprarItemButtonMouseClicked"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ComprarItemButtonActionPerformed"/>
                   </Events>
                 </Component>
                 <Container class="javax.swing.JScrollPane" name="StockItemsScrollPane">
@@ -919,7 +919,7 @@
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="StockCasasScrollPane" pref="352" max="32767" attributes="0"/>
+                              <Component id="StockCasasScrollPane" pref="510" max="32767" attributes="0"/>
                               <Group type="102" attributes="0">
                                   <Component id="ComprarHouseButton" min="-2" pref="100" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
@@ -940,7 +940,7 @@
                               <Component id="VenderHouseButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-                          <Component id="StockCasasScrollPane" pref="216" max="32767" attributes="0"/>
+                          <Component id="StockCasasScrollPane" pref="243" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -1031,13 +1031,13 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="MisPufflesScrollPane" min="-2" pref="168" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="ComprarPuffleButton" min="-2" pref="175" max="-2" attributes="0"/>
-                              <Component id="StockPufflesScrollPane" min="-2" pref="187" max="-2" attributes="0"/>
+                          <Component id="MisPufflesScrollPane" min="-2" pref="224" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="StockPufflesScrollPane" pref="0" max="32767" attributes="0"/>
+                              <Component id="ComprarPuffleButton" pref="268" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -1051,10 +1051,9 @@
                               <Group type="102" attributes="0">
                                   <Component id="ComprarPuffleButton" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="StockPufflesScrollPane" min="-2" pref="217" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="StockPufflesScrollPane" pref="0" max="32767" attributes="0"/>
                               </Group>
-                              <Component id="MisPufflesScrollPane" pref="254" max="32767" attributes="0"/>
+                              <Component id="MisPufflesScrollPane" pref="281" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -1165,7 +1164,7 @@
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="JuegosScrollPane1" alignment="0" pref="352" max="32767" attributes="0"/>
+                              <Component id="JuegosScrollPane1" alignment="0" pref="510" max="32767" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="JugarButton" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -1180,8 +1179,8 @@
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="JugarButton" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="7" max="32767" attributes="0"/>
-                          <Component id="JuegosScrollPane1" min="-2" pref="224" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="JuegosScrollPane1" pref="240" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>

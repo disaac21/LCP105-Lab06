@@ -179,26 +179,27 @@ public class Main extends javax.swing.JFrame {
         ItemsTabLayout.setHorizontalGroup(
             ItemsTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ItemsTabLayout.createSequentialGroup()
-                .addContainerGap(224, Short.MAX_VALUE)
-                .addGroup(ItemsTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(TipoItem)
-                    .addComponent(PrecioItem)
-                    .addComponent(tf_PrecioItem, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
-                    .addComponent(NombreItem)
-                    .addComponent(tf_NombreItem)
-                    .addComponent(cb_TipoItem, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(GuardarItemButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(117, 117, 117))
+                .addContainerGap(369, Short.MAX_VALUE)
+                .addGroup(ItemsTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(ItemsTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(TipoItem)
+                        .addComponent(PrecioItem)
+                        .addComponent(tf_PrecioItem)
+                        .addComponent(NombreItem)
+                        .addComponent(tf_NombreItem)
+                        .addComponent(cb_TipoItem, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(GuardarItemButton, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(61, 61, 61))
             .addGroup(ItemsTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ItemsTabLayout.createSequentialGroup()
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ItemsScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(260, 260, 260)))
+                    .addContainerGap(99, Short.MAX_VALUE)
+                    .addComponent(ItemsScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(213, 213, 213)))
         );
         ItemsTabLayout.setVerticalGroup(
             ItemsTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ItemsTabLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(21, 21, 21)
                 .addComponent(NombreItem)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tf_NombreItem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -210,13 +211,13 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(TipoItem)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cb_TipoItem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(50, 50, 50)
                 .addComponent(GuardarItemButton)
-                .addContainerGap())
+                .addContainerGap(112, Short.MAX_VALUE))
             .addGroup(ItemsTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ItemsTabLayout.createSequentialGroup()
                     .addGap(19, 19, 19)
-                    .addComponent(ItemsScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
+                    .addComponent(ItemsScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 313, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
@@ -301,7 +302,7 @@ public class Main extends javax.swing.JFrame {
             .addGroup(CasaTabLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CasaScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(CasaScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 541, Short.MAX_VALUE)
                     .addGroup(CasaTabLayout.createSequentialGroup()
                         .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(CasaTabLayout.createSequentialGroup()
@@ -320,17 +321,17 @@ public class Main extends javax.swing.JFrame {
                                 .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(tf_TamañoCasa, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(TamañoCasa))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(CostoCasa)
-                            .addComponent(tf_CostoCasa, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 9, Short.MAX_VALUE)))
+                            .addGroup(CasaTabLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(CostoCasa)
+                                    .addComponent(tf_CostoCasa, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(CasaTabLayout.createSequentialGroup()
+                                .addGap(87, 87, 87)
+                                .addComponent(GuardarCasaButton)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(CasaTabLayout.createSequentialGroup()
-                    .addContainerGap(267, Short.MAX_VALUE)
-                    .addComponent(GuardarCasaButton)
-                    .addGap(34, 34, 34)))
         );
         CasaTabLayout.setVerticalGroup(
             CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -342,24 +343,23 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(NombreCasa)
                     .addComponent(TamañoCasa)
                     .addComponent(CostoCasa))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf_NombreCasa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf_TamañoCasa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf_CostoCasa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(XCasa)
-                    .addComponent(tf_XCasa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(YCasa)
-                        .addComponent(tf_YCasa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(60, Short.MAX_VALUE))
-            .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(CasaTabLayout.createSequentialGroup()
-                    .addContainerGap(242, Short.MAX_VALUE)
-                    .addComponent(GuardarCasaButton)
-                    .addContainerGap()))
+                .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(CasaTabLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(tf_NombreCasa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tf_TamañoCasa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tf_CostoCasa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(CasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(XCasa)
+                            .addComponent(tf_XCasa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(YCasa)
+                            .addComponent(tf_YCasa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(CasaTabLayout.createSequentialGroup()
+                        .addGap(53, 53, 53)
+                        .addComponent(GuardarCasaButton)))
+                .addContainerGap(115, Short.MAX_VALUE))
         );
 
         AdminTabbedPane.addTab("Casa", CasaTab);
@@ -419,28 +419,28 @@ public class Main extends javax.swing.JFrame {
             PufflesTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PufflesTabLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(PufflesScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(PufflesScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 110, Short.MAX_VALUE)
                 .addGroup(PufflesTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PufflesTabLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PufflesTabLayout.createSequentialGroup()
+                        .addComponent(GuardarPuffleButton)
+                        .addGap(61, 61, 61))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PufflesTabLayout.createSequentialGroup()
                         .addGroup(PufflesTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(NombrePuffle)
                             .addComponent(ColorPuffle)
-                            .addComponent(CCPuffleButton, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+                            .addComponent(CCPuffleButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(PrecioPuffle)
                             .addComponent(tf_PrecioPuffle)
-                            .addComponent(tf_NombrePuffle))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PufflesTabLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
-                        .addComponent(GuardarPuffleButton)
-                        .addContainerGap())))
+                            .addComponent(tf_NombrePuffle, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(73, 73, 73))))
         );
         PufflesTabLayout.setVerticalGroup(
             PufflesTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PufflesTabLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(PufflesTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(PufflesScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addGroup(PufflesTabLayout.createSequentialGroup()
                         .addComponent(NombrePuffle)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -453,9 +453,9 @@ public class Main extends javax.swing.JFrame {
                         .addComponent(PrecioPuffle)
                         .addGap(4, 4, 4)
                         .addComponent(tf_PrecioPuffle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(GuardarPuffleButton))
-                    .addComponent(PufflesScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                        .addGap(59, 59, 59)
+                        .addComponent(GuardarPuffleButton)
+                        .addGap(0, 86, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -494,6 +494,12 @@ public class Main extends javax.swing.JFrame {
 
         NombreJuego.setText("Nombre");
 
+        tf_NombreJuego.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tf_NombreJuegoActionPerformed(evt);
+            }
+        });
+
         CostoJuego.setText("Costo");
 
         RecompensaJuego.setText("Recompensa");
@@ -513,26 +519,22 @@ public class Main extends javax.swing.JFrame {
             JuegosTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JuegosTabLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(JuegosScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(JuegosScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(JuegosTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(JuegosTabLayout.createSequentialGroup()
-                        .addGroup(JuegosTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(tf_NombreJuego)
-                            .addComponent(tf_CostoJuego)
-                            .addComponent(tf_RecompensaJuego)
-                            .addGroup(JuegosTabLayout.createSequentialGroup()
-                                .addGroup(JuegosTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(NombreJuego)
-                                    .addComponent(CostoJuego)
-                                    .addComponent(RecompensaJuego)
-                                    .addComponent(ExitoJuego))
-                                .addGap(0, 41, Short.MAX_VALUE))
-                            .addComponent(tf_ExitoJuego))
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JuegosTabLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(GuardarJuegoButton))))
+                        .addGap(85, 85, 85)
+                        .addComponent(GuardarJuegoButton))
+                    .addComponent(NombreJuego)
+                    .addComponent(CostoJuego)
+                    .addComponent(RecompensaJuego)
+                    .addComponent(ExitoJuego)
+                    .addGroup(JuegosTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(tf_ExitoJuego, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE)
+                        .addComponent(tf_RecompensaJuego, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(tf_CostoJuego, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(tf_NombreJuego, javax.swing.GroupLayout.Alignment.LEADING)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         JuegosTabLayout.setVerticalGroup(
             JuegosTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -558,9 +560,9 @@ public class Main extends javax.swing.JFrame {
                         .addComponent(ExitoJuego)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(tf_ExitoJuego, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(32, 32, 32)
+                        .addGap(37, 37, 37)
                         .addComponent(GuardarJuegoButton)
-                        .addGap(0, 32, Short.MAX_VALUE))))
+                        .addGap(0, 94, Short.MAX_VALUE))))
         );
 
         AdminTabbedPane.addTab("Juegos", JuegosTab);
@@ -571,23 +573,23 @@ public class Main extends javax.swing.JFrame {
         AdminPane.getContentPane().setLayout(AdminPaneLayout);
         AdminPaneLayout.setHorizontalGroup(
             AdminPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AdminPaneLayout.createSequentialGroup()
-                .addContainerGap(11, Short.MAX_VALUE)
-                .addComponent(AdminTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(12, Short.MAX_VALUE))
             .addGroup(AdminPaneLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(PantallaAdmin)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(AdminPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(AdminPaneLayout.createSequentialGroup()
+                        .addComponent(PantallaAdmin)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(AdminTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 566, Short.MAX_VALUE))
+                .addContainerGap())
         );
         AdminPaneLayout.setVerticalGroup(
             AdminPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AdminPaneLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(PantallaAdmin)
-                .addGap(18, 18, 18)
-                .addComponent(AdminTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(AdminTabbedPane)
+                .addGap(12, 12, 12))
         );
 
         PremiumButton.setText("Premium");
@@ -601,6 +603,11 @@ public class Main extends javax.swing.JFrame {
         ComprarItemButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ComprarItemButtonMouseClicked(evt);
+            }
+        });
+        ComprarItemButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ComprarItemButtonActionPerformed(evt);
             }
         });
 
@@ -668,12 +675,12 @@ public class Main extends javax.swing.JFrame {
         ItemsTab1Layout.setHorizontalGroup(
             ItemsTab1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ItemsTab1Layout.createSequentialGroup()
-                .addGap(2, 2, 2)
-                .addComponent(MisItemsScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(MisItemsScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(ItemsTab1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(StockItemsScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(ComprarItemButton, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE))
+                    .addComponent(ComprarItemButton, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE))
                 .addContainerGap())
         );
         ItemsTab1Layout.setVerticalGroup(
@@ -681,7 +688,7 @@ public class Main extends javax.swing.JFrame {
             .addGroup(ItemsTab1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(ItemsTab1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(MisItemsScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 254, Short.MAX_VALUE)
+                    .addComponent(MisItemsScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 281, Short.MAX_VALUE)
                     .addGroup(ItemsTab1Layout.createSequentialGroup()
                         .addComponent(ComprarItemButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -744,7 +751,7 @@ public class Main extends javax.swing.JFrame {
             .addGroup(CasaTab1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(CasaTab1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(StockCasasScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 352, Short.MAX_VALUE)
+                    .addComponent(StockCasasScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 510, Short.MAX_VALUE)
                     .addGroup(CasaTab1Layout.createSequentialGroup()
                         .addComponent(ComprarHouseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -760,7 +767,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(ComprarHouseButton)
                     .addComponent(VenderHouseButton))
                 .addGap(15, 15, 15)
-                .addComponent(StockCasasScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)
+                .addComponent(StockCasasScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 243, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -838,11 +845,11 @@ public class Main extends javax.swing.JFrame {
             MiCasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MiCasaTabLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(MisPufflesScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(MiCasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(ComprarPuffleButton, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(StockPufflesScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(MisPufflesScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(MiCasaTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(StockPufflesScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(ComprarPuffleButton, javax.swing.GroupLayout.DEFAULT_SIZE, 268, Short.MAX_VALUE))
                 .addContainerGap())
         );
         MiCasaTabLayout.setVerticalGroup(
@@ -853,9 +860,8 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(MiCasaTabLayout.createSequentialGroup()
                         .addComponent(ComprarPuffleButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(StockPufflesScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(MisPufflesScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 254, Short.MAX_VALUE))
+                        .addComponent(StockPufflesScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(MisPufflesScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 281, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -906,7 +912,7 @@ public class Main extends javax.swing.JFrame {
             .addGroup(JuegosTab1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(JuegosTab1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(JuegosScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 352, Short.MAX_VALUE)
+                    .addComponent(JuegosScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 510, Short.MAX_VALUE)
                     .addGroup(JuegosTab1Layout.createSequentialGroup()
                         .addComponent(JugarButton)
                         .addGap(0, 0, Short.MAX_VALUE)))
@@ -917,8 +923,8 @@ public class Main extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JuegosTab1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(JugarButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
-                .addComponent(JuegosScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(JuegosScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -939,14 +945,14 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(Userdinero)
                 .addGap(50, 50, 50))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PinguinPaneLayout.createSequentialGroup()
-                .addContainerGap(164, Short.MAX_VALUE)
+                .addContainerGap(342, Short.MAX_VALUE)
                 .addComponent(PremiumButton)
                 .addGap(161, 161, 161))
             .addGroup(PinguinPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(PinguinPaneLayout.createSequentialGroup()
                     .addGap(11, 11, 11)
-                    .addComponent(UserTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(UserTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 535, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(30, Short.MAX_VALUE)))
         );
         PinguinPaneLayout.setVerticalGroup(
             PinguinPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -955,14 +961,14 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(PinguinPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Username)
                     .addComponent(Userdinero))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 310, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 355, Short.MAX_VALUE)
                 .addComponent(PremiumButton)
                 .addContainerGap())
             .addGroup(PinguinPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(PinguinPaneLayout.createSequentialGroup()
                     .addGap(32, 32, 32)
-                    .addComponent(UserTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(33, Short.MAX_VALUE)))
+                    .addComponent(UserTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(51, Short.MAX_VALUE)))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -1238,17 +1244,21 @@ public class Main extends javax.swing.JFrame {
         if (StockTableItems.getSelectedRow() >= 0) {
 //            DefaultTableModel modelostock
 //                    = (DefaultTableModel) StockTableItems.getModel();
-            DefaultTableModel modelo
-                    = (DefaultTableModel) TableMisItems.getModel();
-            int resta = (int) StockTableItems.getValueAt(StockTableItems.getSelectedRow(), 1);
-            Using.DineroPinguino = Using.DineroPinguino - resta;
-            Userdinero.setText("Dinero: " + Using.DineroPinguino);
-            Object[] newrow = {
-                StockTableItems.getValueAt(StockTableItems.getSelectedRow(), 0),
-                StockTableItems.getValueAt(StockTableItems.getSelectedRow(), 1)
-            };
-            modelo.addRow(newrow);
-            TableMisItems.setModel(modelo);
+            if ((int) StockTableItems.getValueAt(StockTableItems.getSelectedRow(), 1) > Using.DineroPinguino) {
+                JOptionPane.showMessageDialog(rootPane, "No Hubo Compra. Dinero Insuficiente");
+            } else {
+                DefaultTableModel modelo
+                        = (DefaultTableModel) TableMisItems.getModel();
+                int resta = (int) StockTableItems.getValueAt(StockTableItems.getSelectedRow(), 1);
+                Using.DineroPinguino = Using.DineroPinguino - resta;
+                Userdinero.setText("Dinero: " + Using.DineroPinguino);
+                Object[] newrow = {
+                    StockTableItems.getValueAt(StockTableItems.getSelectedRow(), 0),
+                    StockTableItems.getValueAt(StockTableItems.getSelectedRow(), 1)
+                };
+                modelo.addRow(newrow);
+                TableMisItems.setModel(modelo);
+            }
         } else {
             JOptionPane.showMessageDialog(rootPane, "No Hubo Compra");
         }
@@ -1274,18 +1284,22 @@ public class Main extends javax.swing.JFrame {
 
     private void ComprarHouseButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ComprarHouseButtonMouseClicked
         if (StockTableCasa.getSelectedRow() >= 0) {
+            if ((int) StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 2) > Using.DineroPinguino) {
+                JOptionPane.showMessageDialog(rootPane, "No Hubo Compra. Dinero Insuficiente");
+            } else {
 ////            DefaultTableModel modelostock
 ////                    = (DefaultTableModel) StockTableItems.getModel();
-            int resta = (int) StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 2);
-            Using.DineroPinguino = Using.DineroPinguino - resta;
-            Userdinero.setText("Dinero: " + Using.DineroPinguino);
-            Using.CasaPinguino.setNombreCasa((String) StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 0));
-            Using.CasaPinguino.setTamañoCasa((String) StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 1));
-            Using.CasaPinguino.setCostoCasa((int) StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 2));
-            Using.CasaPinguino.setCooXCasa((int) StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 3));
-            Using.CasaPinguino.setCooYCasa((int) StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 4));
+                int resta = (int) StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 2);
+                Using.DineroPinguino = Using.DineroPinguino - resta;
+                Userdinero.setText("Dinero: " + Using.DineroPinguino);
+                Using.CasaPinguino.setNombreCasa((String) StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 0));
+                Using.CasaPinguino.setTamañoCasa((String) StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 1));
+                Using.CasaPinguino.setCostoCasa((int) StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 2));
+                Using.CasaPinguino.setCooXCasa((int) StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 3));
+                Using.CasaPinguino.setCooYCasa((int) StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 4));
 //            modelostock.removeRow(StockTableCasa.getSelectedRow());
 //            StockTableCasa.setModel(modelostock);
+            }
         } else {
             JOptionPane.showMessageDialog(rootPane, "No Hubo Compra");
         }
@@ -1318,19 +1332,23 @@ public class Main extends javax.swing.JFrame {
 
     private void ComprarPuffleButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ComprarPuffleButtonMouseClicked
         if (TableStockPuffles.getSelectedRow() >= 0) {
+            if ((int) TableStockPuffles.getValueAt(TableStockPuffles.getSelectedRow(), 2) > Using.DineroPinguino) {
+                JOptionPane.showMessageDialog(rootPane, "No Hubo Compra. Dinero Insuficiente");
+            } else {
 //            DefaultTableModel modelostock
 //                    = (DefaultTableModel) StockTableItems.getModel();
-            DefaultTableModel modelo
-                    = (DefaultTableModel) TableMisPuffles.getModel();
-            int resta = (int) TableStockPuffles.getValueAt(TableStockPuffles.getSelectedRow(), 2);
-            Using.DineroPinguino = Using.DineroPinguino - resta;
-            Userdinero.setText("Dinero: " + Using.DineroPinguino);
-            Object[] newrow = {
-                TableStockPuffles.getValueAt(TableStockPuffles.getSelectedRow(), 0),
-                TableStockPuffles.getValueAt(TableStockPuffles.getSelectedRow(), 1)
-            };
-            modelo.addRow(newrow);
-            TableMisPuffles.setModel(modelo);
+                DefaultTableModel modelo
+                        = (DefaultTableModel) TableMisPuffles.getModel();
+                int resta = (int) TableStockPuffles.getValueAt(TableStockPuffles.getSelectedRow(), 2);
+                Using.DineroPinguino = Using.DineroPinguino - resta;
+                Userdinero.setText("Dinero: " + Using.DineroPinguino);
+                Object[] newrow = {
+                    TableStockPuffles.getValueAt(TableStockPuffles.getSelectedRow(), 0),
+                    TableStockPuffles.getValueAt(TableStockPuffles.getSelectedRow(), 1)
+                };
+                modelo.addRow(newrow);
+                TableMisPuffles.setModel(modelo);
+            }
         } else {
             JOptionPane.showMessageDialog(rootPane, "No Hubo Compra");
         }
@@ -1350,6 +1368,14 @@ public class Main extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, "Perdió!");
         }
     }//GEN-LAST:event_JugarButtonMouseClicked
+
+    private void tf_NombreJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_NombreJuegoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_NombreJuegoActionPerformed
+
+    private void ComprarItemButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComprarItemButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ComprarItemButtonActionPerformed
 
     /**
      * @param args the command line arguments
