@@ -697,6 +697,11 @@ public class Main extends javax.swing.JFrame {
         UserTabbedPane.addTab("Items", ItemsTab1);
 
         ComprarHouseButton.setText("Comprar");
+        ComprarHouseButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ComprarHouseButtonMouseClicked(evt);
+            }
+        });
 
         VenderHouseButton.setText("Vender");
 
@@ -1022,13 +1027,38 @@ public class Main extends javax.swing.JFrame {
             }
             if (existe) {
                 for (int i = 0; i < Users.size(); i++) {
-                    if (tf_Nombre.getText().equals(Users.get(i).getNombrePinguino()) && tf_Contraseña.getText().equals(Users.get(i).getContraseñaPinguino())){
+                    if (tf_Nombre.getText().equals(Users.get(i).getNombrePinguino()) && tf_Contraseña.getText().equals(Users.get(i).getContraseñaPinguino())) {
                         Using = Users.get(i);
                     }
                 }
+
+                TableMisItems.setModel(new javax.swing.table.DefaultTableModel(
+                        new Object[][]{},
+                        new String[]{
+                            "Nombre", "Tipo"
+                        }
+                ) {
+                    Class[] types = new Class[]{
+                        java.lang.String.class, java.lang.Object.class
+                    };
+                    boolean[] canEdit = new boolean[]{
+                        false, false,};
+                });
+
+                DefaultTableModel modelo
+                        = (DefaultTableModel) TableMisItems.getModel();
+                for (int i = 0; i < Using.ItemsPinguino.size(); i++) {
+                    Object[] newrow = {
+                        Using.ItemsPinguino.get(i).getNombreItem(),
+                        Using.ItemsPinguino.get(i).getTipoItem()
+                    };
+                    modelo.addRow(newrow);
+                    TableMisItems.setModel(modelo);
+                }
+
                 Username.setText("Pinguino " + Using.NombrePinguino);
                 Userdinero.setText("Dinero: " + Using.DineroPinguino);
-                JOptionPane.showMessageDialog(this, "LogIn", "Bienvenido " + Using.getNombrePinguino(), JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Bienvenido de Vuelta " + Using.getNombrePinguino(), "LogIn", JOptionPane.PLAIN_MESSAGE);
                 tf_Nombre.setText("");
                 tf_Contraseña.setText("");
                 PinguinPane.setModal(true);
@@ -1037,12 +1067,35 @@ public class Main extends javax.swing.JFrame {
                 PinguinPane.setVisible(true);
                 return;
             } else {
-                Pinguino np = new Pinguino(tf_Nombre.getText(), tf_Contraseña.getText(), false, 1000, null);
+
+                TableMisItems.setModel(new javax.swing.table.DefaultTableModel(
+                        new Object[][]{},
+                        new String[]{
+                            "Nombre", "Tipo"
+                        }
+                ) {
+                    Class[] types = new Class[]{
+                        java.lang.String.class, java.lang.Object.class
+                    };
+                    boolean[] canEdit = new boolean[]{
+                        false, false, false, false
+                    };
+
+                    public Class getColumnClass(int columnIndex) {
+                        return types[columnIndex];
+                    }
+
+                    public boolean isCellEditable(int rowIndex, int columnIndex) {
+                        return canEdit[columnIndex];
+                    }
+                });
+
+                Pinguino np = new Pinguino(tf_Nombre.getText(), tf_Contraseña.getText(), false, 1000, new Casa());
                 Users.add(np);
                 Using = np;
                 Username.setText("Pinguino " + Using.NombrePinguino);
                 Userdinero.setText("Dinero: " + Using.DineroPinguino);
-                JOptionPane.showMessageDialog(this, "LogIn", "Bienvenido " + Using.getNombrePinguino(), JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Bienvenido " + Using.getNombrePinguino(), "LogIn", JOptionPane.PLAIN_MESSAGE);
                 tf_Nombre.setText("");
                 tf_Contraseña.setText("");
                 PinguinPane.setModal(true);
@@ -1175,7 +1228,23 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_tf_NombreItemActionPerformed
 
     private void ComprarItemButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ComprarItemButtonMouseClicked
-        // TODO add your handling code here:
+        if (StockTableItems.getSelectedRow() >= 0) {
+//            DefaultTableModel modelostock
+//                    = (DefaultTableModel) StockTableItems.getModel();
+            DefaultTableModel modelo
+                    = (DefaultTableModel) TableMisItems.getModel();
+            int resta = (int) StockTableItems.getValueAt(StockTableItems.getSelectedRow(), 1);
+            Using.DineroPinguino = Using.DineroPinguino - resta;
+            Userdinero.setText("Dinero: " + Using.DineroPinguino);
+            Object[] newrow = {
+                StockTableItems.getValueAt(StockTableItems.getSelectedRow(), 0),
+                StockTableItems.getValueAt(StockTableItems.getSelectedRow(), 1)
+            };
+            modelo.addRow(newrow);
+            TableMisItems.setModel(modelo);
+        } else {
+            JOptionPane.showMessageDialog(rootPane, "No Hubo Compra");
+        }
     }//GEN-LAST:event_ComprarItemButtonMouseClicked
 
     private void GuardarItemButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarItemButtonActionPerformed
@@ -1187,15 +1256,33 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_GuardarCasaButtonActionPerformed
 
     private void PremiumButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PremiumButtonMouseClicked
-        int CompraPremium = Using.getDineroPinguino();
-        if (CompraPremium < 2000) {
+        if (Using.getDineroPinguino() < 2000) {
             JOptionPane.showMessageDialog(rootPane, "No Cuenta Con El Dinero Suficiente");
         } else {
+            Using.DineroPinguino = Using.DineroPinguino - 2000;
             Using.setSocioPinguino(true);
             JOptionPane.showMessageDialog(rootPane, "Felicidades! Ahora Es Premium");
         }
-        
     }//GEN-LAST:event_PremiumButtonMouseClicked
+
+    private void ComprarHouseButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ComprarHouseButtonMouseClicked
+        if (StockTableCasa.getSelectedRow() > -1) {
+            DefaultTableModel modelostock
+                    = (DefaultTableModel) StockTableItems.getModel();
+            int resta = (int) StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 2);
+            Using.DineroPinguino = Using.DineroPinguino - resta;
+            Userdinero.setText("Dinero: " + Using.DineroPinguino);
+            Using.CasaPinguino.setNombreCasa((String)StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 0));
+            Using.CasaPinguino.setTamañoCasa((String)StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 1));
+            Using.CasaPinguino.setCostoCasa((int)StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 2));
+            Using.CasaPinguino.setCooXCasa((int)StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 3));
+            Using.CasaPinguino.setCooYCasa((int)StockTableCasa.getValueAt(StockTableCasa.getSelectedRow(), 4));
+            modelostock.removeRow(StockTableCasa.getSelectedRow());
+            StockTableCasa.setModel(modelostock);
+        } else {
+            JOptionPane.showMessageDialog(rootPane, "No Hubo Compra");
+        }
+    }//GEN-LAST:event_ComprarHouseButtonMouseClicked
 
     /**
      * @param args the command line arguments

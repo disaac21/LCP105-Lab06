@@ -951,6 +951,9 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Comprar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="ComprarHouseButtonMouseClicked"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="VenderHouseButton">
                   <Properties>
